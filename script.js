@@ -10,7 +10,51 @@
    listener del submit por un redirect a esa URL.                             */
 const DESTINO_POSTULACIONES = 'drotondi@gmail.com';
 
-/* --- 1. Nav: resaltar la sección visible ----------------------------------- */
+/* --- 1. Menú de pantallas chicas -------------------------------------------
+   El botón abre y cierra el panel de secciones. Se cierra al tocar un link,
+   con Escape, tocando fuera, o al volver a una pantalla ancha.              */
+
+(function navMenu() {
+  const boton = document.getElementById('nav-toggle');
+  const panel = document.getElementById('nav-links');
+  if (!boton || !panel) return;
+
+  const estaAbierto = () => panel.classList.contains('is-open');
+
+  function abrir(si) {
+    panel.classList.toggle('is-open', si);
+    boton.setAttribute('aria-expanded', String(si));
+    boton.setAttribute('aria-label', si ? 'Cerrar el menú' : 'Abrir el menú');
+  }
+
+  boton.addEventListener('click', () => abrir(!estaAbierto()));
+
+  // Tocar una sección cierra el panel y deja ver la página.
+  panel.addEventListener('click', (e) => {
+    if (e.target.closest('a')) abrir(false);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && estaAbierto()) {
+      abrir(false);
+      boton.focus();
+    }
+  });
+
+  // Tocar fuera del menú lo cierra.
+  document.addEventListener('click', (e) => {
+    if (!estaAbierto()) return;
+    if (!panel.contains(e.target) && !boton.contains(e.target)) abrir(false);
+  });
+
+  // Al rotar el teléfono o pasar a desktop, el panel no debe quedar colgado.
+  const ancha = window.matchMedia('(min-width: 981px)');
+  const alCambiar = (e) => { if (e.matches) abrir(false); };
+  if (ancha.addEventListener) ancha.addEventListener('change', alCambiar);
+  else ancha.addListener(alCambiar);          // Safari viejo
+})();
+
+/* --- 2. Nav: resaltar la sección visible ----------------------------------- */
 
 (function navHighlight() {
   const links = Array.from(document.querySelectorAll('.nav__links a'));
@@ -38,7 +82,7 @@ const DESTINO_POSTULACIONES = 'drotondi@gmail.com';
   byId.forEach((_, section) => observer.observe(section));
 })();
 
-/* --- 2. Formulario de postulación ------------------------------------------
+/* --- 3. Formulario de postulación ------------------------------------------
    Envía por fetch a /api/postular, que manda el mail del lado del servidor.
    El candidato nunca sale de la página ni abre su cliente de correo.
    Si el envío falla, se le ofrece el mail prellenado como respaldo.         */

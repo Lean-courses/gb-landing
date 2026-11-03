@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.className="js-nav"</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Programa Green Belt — Lean Six Sigma</title>
 <meta name="description" content="Formación y certificación Lean Six Sigma Green Belt: dos semanas de teoría y práctica, y el método DMAIC aplicado a un proyecto real de tu planta, con coach y sponsor.">
@@ -24,7 +25,11 @@
       <span class="brand__mark">Green Belt</span>
       <span class="brand__sub">Lean Six Sigma</span>
     </a>
-    <nav class="nav__links" aria-label="Secciones">
+    <button class="nav__toggle" type="button" id="nav-toggle"
+            aria-controls="nav-links" aria-expanded="false" aria-label="Abrir el menú">
+      <span class="nav__burger" aria-hidden="true"></span>
+    </button>
+    <nav class="nav__links" id="nav-links" aria-label="Secciones">
       <a href="#programa">El programa</a>
       <a href="#perfil">A quién va dirigido</a>
       <a href="#como">Cómo funciona</a>
