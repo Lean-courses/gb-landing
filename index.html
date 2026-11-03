@@ -232,7 +232,7 @@
           <text x="750" y="49.6">I</text><text x="980" y="49.6">C</text>
         </g>
 
-        <g font-family="Times New Roman,Times,serif" font-size="18" font-weight="700" fill="#1f1e1d" text-anchor="middle">
+        <g font-family="ui-serif,Georgia,serif" font-size="17" font-weight="600" fill="#1f1e1d" text-anchor="middle">
           <text x="60" y="82">Define</text><text x="290" y="82">Measure</text><text x="520" y="82">Analyze</text>
           <text x="750" y="82">Improve</text><text x="980" y="82">Control</text>
         </g>
@@ -588,9 +588,14 @@
           <input id="f-sponsor" name="sponsor" type="text" placeholder="Quién avalaría el proyecto">
         </div>
 
+        <div class="hp" aria-hidden="true">
+          <label for="f-website">No completes este campo</label>
+          <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
         <div class="form__foot">
           <button class="btn btn--primary btn--block" type="submit">Enviar postulación</button>
-          <p class="form__note" id="form-note">Se abre tu cliente de mail con la postulación lista para enviar.</p>
+          <p class="form__note" id="form-note" role="status" aria-live="polite">Te confirmamos la recepción en pantalla. No se abre tu cliente de correo.</p>
         </div>
       </form>
     </div>

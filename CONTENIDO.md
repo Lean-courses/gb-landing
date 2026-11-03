@@ -34,7 +34,8 @@ Definido por el usuario en esta sesión:
   factibilidad junto con los sponsors.
 - Cada candidato tiene **un coach y un sponsor** asignados.
 - **Sigma Sim** es una simulación del proceso DMAIC sobre un caso de estudio real.
-- Las postulaciones van a `drotondi@gmail.com`.
+- Las postulaciones van a `drotondi@gmail.com`, enviadas por el servidor
+  (Resend) sin abrir el cliente de correo del candidato.
 - La página **no se presenta como programa interno de Amcor**: Amcor figura
   como cliente en la banda "Empresas que ya confiaron".
 

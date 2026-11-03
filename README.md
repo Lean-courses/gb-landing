@@ -8,9 +8,9 @@ postulaciones. Es la puerta de entrada a las dos apps del programa:
 ## Cómo se ve
 
 Estilo minimalista cálido (referencia: Claude / Notion): fondo crema, mucho
-espacio en blanco, títulos en Times New Roman, un único acento verde oscuro
-(`#1a5b43`) y bordes de 1px. El cuerpo va en sans por legibilidad: Times en
-párrafos largos y en mobile se lee mal.
+espacio en blanco, títulos en serif (Georgia), un único acento verde oscuro
+(`#1a5b43`) y bordes de 1px. El cuerpo va en sans. Sin webfonts: la página
+renderiza sin pedir nada a la red.
 
 La página **no es de ninguna empresa en particular**: es la oferta del programa.
 Amcor aparece una sola vez, como cliente, en la banda "Empresas que ya
@@ -19,19 +19,51 @@ confiaron" debajo del hero. Su logo se usa a color y sin filtros — aplicarle
 
 ## Stack
 
-Ninguno. Tres archivos, cero dependencias, cero build.
+Página estática sin build ni dependencias npm, más **una** función serverless
+para el envío del formulario.
 
 ```
-index.html          la página completa
-styles.css          tokens de diseño + layout + responsive
-script.js           nav activo al scrollear + formulario -> mailto
+index.html             la página completa
+styles.css             tokens de diseño + layout + responsive
+script.js              nav activo al scrollear + envío del formulario
+api/postular.js        función serverless: recibe la postulación y manda el mail
 assets/logo-amcor.png  logo de cliente (único binario del proyecto)
-vercel.json         headers y cleanUrls para el deploy
-CONTENIDO.md        qué dato es real, qué es supuesto y qué falta completar
+vercel.json            headers y cleanUrls
+CONTENIDO.md           qué dato es real, qué es supuesto y qué falta completar
 ```
 
-Se abre con doble click en `index.html`. No necesita servidor ni internet para
-renderizar (no carga fuentes ni librerías externas).
+## El formulario de postulación
+
+El candidato completa y envía **sin salir de la página y sin abrir su cliente
+de correo**: ve una confirmación en pantalla. El navegador hace `POST` a
+`/api/postular`, y esa función manda el mail con [Resend](https://resend.com).
+
+Si el envío falla por cualquier motivo, se le muestra el error y un link con el
+mail prellenado como respaldo, para que la postulación no se pierda.
+
+### Puesta en marcha (5 minutos, una sola vez)
+
+1. Crear una cuenta gratis en [resend.com](https://resend.com) con la misma
+   casilla que va a recibir las postulaciones.
+2. En **API Keys**, generar una key (empieza con `re_`) y copiarla.
+3. En Vercel: **Settings → Environment Variables**, agregar:
+
+   | Variable | Valor | ¿Obligatoria? |
+   |---|---|---|
+   | `RESEND_API_KEY` | la key del paso 2 | **sí** |
+   | `DESTINO_MAIL` | a dónde llegan las postulaciones | no, por defecto `drotondi@gmail.com` |
+   | `REMITENTE_MAIL` | remitente del mail | no, por defecto `onboarding@resend.dev` |
+
+4. Redeployar para que la función tome la variable.
+
+Sin dominio verificado, Resend solo permite enviar **a la casilla con la que te
+registraste** — que es exactamente este caso. Si más adelante querés que las
+postulaciones vayan a otra dirección, hay que verificar un dominio en Resend y
+cambiar `REMITENTE_MAIL`.
+
+El plan gratuito cubre 3.000 mails por mes. El formulario trae un campo trampa
+(*honeypot*) invisible: si un bot lo completa, la postulación se descarta en
+silencio.
 
 ## Correr en local
 
@@ -39,15 +71,23 @@ renderizar (no carga fuentes ni librerías externas).
 python3 -m http.server 8000
 ```
 
-Después abrir `http://localhost:8000`.
+Sirve para ver la página, pero **el formulario no va a enviar**: `/api/` no
+existe en un servidor estático, así que se ve el mensaje de error con el link
+de respaldo. Para probar el envío de verdad:
+
+```bash
+npx vercel dev
+```
 
 ## Deploy en Vercel
 
 1. Importar el repo en Vercel.
 2. Framework Preset: **Other**. Build Command: vacío. Output Directory: `.`
-3. Deploy. No hay variables de entorno.
+3. Cargar `RESEND_API_KEY` (ver arriba) y deployar.
 
-Cualquier hosting estático sirve igual (GitHub Pages, S3, SharePoint).
+Ojo: por la función serverless, esto **ya no es un sitio puramente estático**.
+En GitHub Pages o SharePoint la página se vería bien pero el formulario no
+enviaría; habría que volver al mail prellenado.
 
 ## Dónde se editan las cosas
 
@@ -55,22 +95,23 @@ Cualquier hosting estático sirve igual (GitHub Pages, S3, SharePoint).
 |---|---|
 | Textos, secciones, preguntas del FAQ | `index.html` |
 | Colores, tipografías, espaciados | bloque `:root` al tope de `styles.css` |
-| Mail que recibe las postulaciones | constante `DESTINO_POSTULACIONES` en `script.js` |
+| Mail que recibe las postulaciones | variable `DESTINO_MAIL` en Vercel (o la constante `DESTINO_POR_DEFECTO` en `api/postular.js`) |
+| Texto del mail que te llega | función `handler` en `api/postular.js` |
+| Texto de la confirmación en pantalla | función `mostrarExito` en `script.js` |
 | Links a las apps | buscar `vercel.app` en `index.html` |
 | Logos de clientes | sección `.clients` de `index.html` + archivos en `assets/` |
 | Las 24 herramientas por fase | sección `#fases` de `index.html` |
 
 ### Pasar la postulación a un Microsoft Form
 
-Hoy el formulario arma un mail prellenado a la casilla configurada. Para
-cambiarlo a un Form, en `script.js` reemplazar el cuerpo del listener de
-`submit` por:
+Si en algún momento preferís procesarlas en Forms, reemplazar el cuerpo del
+listener de `submit` en `script.js` por:
 
 ```js
 window.open('https://forms.office.com/...', '_blank', 'noopener');
 ```
 
-o directamente convertir el botón en un enlace y borrar el `<form>`.
+y borrar `api/postular.js`.
 
 ## Pendientes de contenido
 
