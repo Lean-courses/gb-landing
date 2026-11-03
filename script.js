@@ -57,7 +57,7 @@ const DESTINO_POSTULACIONES = 'drotondi@gmail.com';
     const asunto = `Postulación Green Belt — ${nombre || 'candidato'}`;
 
     const cuerpo = [
-      'Hola Damián,',
+      'Hola,',
       '',
       'Quiero postularme al programa Lean Six Sigma Green Belt.',
       '',

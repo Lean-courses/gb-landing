@@ -28,10 +28,15 @@ Tomados de `drotondi/MyGreenBeltProject` (`README.md` y
 
 Definido por el usuario en esta sesión:
 
-- La dinámica es **formación intensiva al inicio + ejecución del proyecto con
-  coaching periódico**.
+- La formación dura **dos semanas**, e incluye teoría, práctica y la
+  presentación del proyecto de cada candidato.
+- **Antes del inicio se preseleccionan los proyectos** y se evalúa su
+  factibilidad junto con los sponsors.
+- Cada candidato tiene **un coach y un sponsor** asignados.
 - **Sigma Sim** es una simulación del proceso DMAIC sobre un caso de estudio real.
 - Las postulaciones van a `drotondi@gmail.com`.
+- La página **no se presenta como programa interno de Amcor**: Amcor figura
+  como cliente en la banda "Empresas que ya confiaron".
 
 ---
 
@@ -44,8 +49,8 @@ Ninguno inventa cifras.
   supply chain, mejora continua, finanzas de planta). Derivados del contexto
   industrial de Amcor, no de una lista oficial del programa.
 - **Los 3 requisitos de ingreso** (problema medible, sponsor, tiempo protegido).
-  Son el estándar de cualquier programa Green Belt serio, pero no están escritos
-  en ningún documento del programa.
+  El sponsor ya es dato confirmado; los otros dos son el estándar de cualquier
+  programa Green Belt serio, pero no están escritos en ningún documento.
 - **Los criterios de certificación** (5 tollgates + impacto validado + plan de
   control vigente). Se desprenden de cómo funciona la app, pero no hay un
   documento de certificación que los fije.
@@ -60,11 +65,14 @@ Marcados en la página con una etiqueta amarilla visible. Resolver antes de publ
 
 | # | Qué falta | Dónde aparece |
 |---|---|---|
-| 1 | **Duración y formato** del bloque de formación intensiva: cuántos días, cuántas horas, presencial o virtual | FAQ "¿Cuánto tiempo me demanda por semana?" |
-| 2 | **Horas semanales** estimadas de dedicación al proyecto | mismo FAQ |
-| 3 | **Calendario de clases** y cupos disponibles del próximo ciclo | FAQ "¿Cuándo empieza la próxima clase?" |
-| 4 | **Criterio de examen**: si hay evaluación teórica, nota mínima y momento | sección Certificación |
-| 5 | **Duración total** del programa de punta a punta (desde la formación hasta el cierre del proyecto) | no está en la página; conviene agregarlo al hero cuando se defina |
+| 1 | **Marca del programa**: hoy el header dice solo "Green Belt / Lean Six Sigma". Falta el nombre propio, y con él un logo | nav y footer |
+| 2 | **Quién emite la certificación** | sección Certificación |
+| 3 | **Dedicación semanal** estimada durante la ejecución del proyecto (las dos semanas de formación ya están definidas) | FAQ "¿Cuánto tiempo me demanda por semana?" |
+| 4 | **Calendario de clases** y cupos disponibles del próximo ciclo | FAQ "¿Cuándo empieza la próxima clase?" |
+| 5 | **Criterio de examen**: si hay evaluación teórica, nota mínima y momento | sección Certificación |
+| 6 | **Modalidad** de las dos semanas: presencial, virtual o híbrida | sección Cómo funciona |
+| 7 | **Los otros tres logos de clientes**: hoy son cajas punteadas que dicen "Tu empresa". Reemplazar por logos reales o reducir la fila a uno solo | banda `.clients` |
+| 8 | **Duración total** del programa de punta a punta, desde la formación hasta el cierre del proyecto | no está en la página; conviene agregarlo al hero cuando se defina |
 
 ### Otros pendientes, no de contenido
 

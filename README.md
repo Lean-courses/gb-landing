@@ -1,4 +1,4 @@
-# Landing — Programa Lean Six Sigma Green Belt (Amcor LatAm)
+# Landing — Programa Lean Six Sigma Green Belt
 
 Página única, estática, en español. Presenta el programa Green Belt y recoge
 postulaciones. Es la puerta de entrada a las dos apps del programa:
@@ -8,21 +8,26 @@ postulaciones. Es la puerta de entrada a las dos apps del programa:
 ## Cómo se ve
 
 Estilo minimalista cálido (referencia: Claude / Notion): fondo crema, mucho
-espacio en blanco, títulos en serif, un único acento terracota y bordes de 1px.
-Sin branding corporativo dominante — por eso **no lleva el logo Amcor**: el
-manual de marca no permite ponerlo sobre colores que no son de la paleta. La
-pertenencia se marca con el wordmark de texto en el header y el footer.
+espacio en blanco, títulos en Times New Roman, un único acento verde oscuro
+(`#1a5b43`) y bordes de 1px. El cuerpo va en sans por legibilidad: Times en
+párrafos largos y en mobile se lee mal.
+
+La página **no es de ninguna empresa en particular**: es la oferta del programa.
+Amcor aparece una sola vez, como cliente, en la banda "Empresas que ya
+confiaron" debajo del hero. Su logo se usa a color y sin filtros — aplicarle
+`grayscale` alteraría la marca, cosa que su manual no permite.
 
 ## Stack
 
 Ninguno. Tres archivos, cero dependencias, cero build.
 
 ```
-index.html     la página completa
-styles.css     tokens de diseño + layout + responsive
-script.js      nav activo al scrollear + formulario -> mailto
-vercel.json    headers y cleanUrls para el deploy
-CONTENIDO.md   qué dato es real, qué es supuesto y qué falta completar
+index.html          la página completa
+styles.css          tokens de diseño + layout + responsive
+script.js           nav activo al scrollear + formulario -> mailto
+assets/logo-amcor.png  logo de cliente (único binario del proyecto)
+vercel.json         headers y cleanUrls para el deploy
+CONTENIDO.md        qué dato es real, qué es supuesto y qué falta completar
 ```
 
 Se abre con doble click en `index.html`. No necesita servidor ni internet para
@@ -51,7 +56,8 @@ Cualquier hosting estático sirve igual (GitHub Pages, S3, SharePoint).
 | Textos, secciones, preguntas del FAQ | `index.html` |
 | Colores, tipografías, espaciados | bloque `:root` al tope de `styles.css` |
 | Mail que recibe las postulaciones | constante `DESTINO_POSTULACIONES` en `script.js` |
-| Links a las apps | buscar `vercel.app` en `index.html` (aparece 5 veces) |
+| Links a las apps | buscar `vercel.app` en `index.html` |
+| Logos de clientes | sección `.clients` de `index.html` + archivos en `assets/` |
 | Las 24 herramientas por fase | sección `#fases` de `index.html` |
 
 ### Pasar la postulación a un Microsoft Form
