@@ -10,32 +10,31 @@
    listener del submit por un redirect a esa URL.                             */
 const DESTINO_POSTULACIONES = 'drotondi@gmail.com';
 
-/* --- 1. Video de la clase ---------------------------------------------------
+/* --- 1. Videos de las clases ---------------------------------------------------
    Hasta que alguien hace click no se pide nada a YouTube: solo está la
    miniatura. Recién ahí se inserta el reproductor, desde el dominio
    youtube-nocookie, y arranca solo.                                         */
 
-(function video() {
-  const caja = document.getElementById('video-clase');
-  if (!caja) return;
+(function videos() {
+  document.querySelectorAll('.video').forEach((caja) => {
+    caja.addEventListener('click', function reproducir() {
+      const id = caja.dataset.video;
+      if (!id || caja.classList.contains('is-playing')) return;
 
-  caja.addEventListener('click', function reproducir() {
-    const id = caja.dataset.video;
-    if (!id || caja.classList.contains('is-playing')) return;
+      const marco = document.createElement('iframe');
+      marco.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) +
+                  '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+      marco.title = 'Una clase del programa Green Belt';
+      marco.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; ' +
+                    'gyroscope; picture-in-picture; web-share';
+      marco.allowFullscreen = true;
 
-    const marco = document.createElement('iframe');
-    marco.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) +
-                '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
-    marco.title = 'Una clase del programa Green Belt';
-    marco.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; ' +
-                  'gyroscope; picture-in-picture; web-share';
-    marco.allowFullscreen = true;
-
-    caja.innerHTML = '';
-    caja.appendChild(marco);
-    caja.classList.add('is-playing');
-    caja.setAttribute('aria-label', 'Video de una clase del programa, reproduciendo');
-    caja.removeEventListener('click', reproducir);
+      caja.innerHTML = '';
+      caja.appendChild(marco);
+      caja.classList.add('is-playing');
+      caja.setAttribute('aria-label', 'Video de una clase del programa, reproduciendo');
+      caja.removeEventListener('click', reproducir);
+    });
   });
 })();
 

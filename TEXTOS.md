@@ -256,19 +256,16 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 **6.23** _(párrafo)_
 > El dueño del proceso que vas a intervenir. Avala el alcance desde la evaluación de factibilidad previa, destraba los recursos y las decisiones que el proyecto necesita, y se queda con la mejora cuando el proyecto cierra.
 
-## 7. El video de la clase
+## 7. Los videos de las clases
 
 **7.1** _(rótulo)_
-> Una clase
+> Las clases
 
 **7.2** _(título)_
 > Mirá cómo se dicta, antes de anotarte.
 
 **7.3** _(párrafo)_
-> Una clase completa del programa, sin editar. Así se enseña el método: con el caso sobre la mesa y las herramientas aplicándose en vivo.
-
-**7.4** _(botón)_
-> Una clase del programa
+> Clases completas del programa, sin editar. Así se enseña el método: con el caso sobre la mesa y las herramientas aplicándose en vivo.
 
 ## 8. Las 5 fases
 

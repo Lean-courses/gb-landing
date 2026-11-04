@@ -556,6 +556,12 @@ img, svg { max-width: 100%; }
    reproductor. Así YouTube no carga su JavaScript ni deja cookies en cada
    visita, solo cuando alguien decide mirar.                                 */
 
+.videos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
 .video {
   display: block;
   position: relative;
@@ -573,6 +579,7 @@ img, svg { max-width: 100%; }
   transition: border-color .16s ease;
 }
 .video:hover { border-color: var(--line-strong); }
+.video:hover .video__scrim { background: rgba(20, 18, 17, .06); }
 
 .video__thumb {
   width: 100%;
@@ -586,9 +593,10 @@ img, svg { max-width: 100%; }
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom,
-              rgba(20, 18, 17, .12) 0%,
-              rgba(20, 18, 17, 0) 38%,
-              rgba(20, 18, 17, .55) 100%);
+              rgba(20, 18, 17, .14) 0%,
+              rgba(20, 18, 17, .04) 45%,
+              rgba(20, 18, 17, .28) 100%);
+  transition: background .16s ease;
 }
 
 .video__play {
@@ -610,18 +618,6 @@ img, svg { max-width: 100%; }
 .video__play svg { width: 30px; height: 30px; margin-left: 3px; }
 .video:hover .video__play { transform: scale(1.06); background: var(--accent-ink); }
 .video:active .video__play { transform: scale(.98); }
-
-.video__label {
-  position: absolute;
-  left: 22px;
-  bottom: 18px;
-  right: 22px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 550;
-  text-align: left;
-  text-shadow: 0 1px 10px rgba(20, 18, 17, .5);
-}
 
 /* Una vez reproduciendo, el iframe hereda el mismo marco: sin salto. */
 .video.is-playing {
@@ -899,6 +895,9 @@ form {
   .flow__step:nth-child(2)::after { display: none; }
   .flow__step:nth-child(1), .flow__step:nth-child(2) { border-bottom: 1px solid var(--line); }
   .apps, .cert, .apply, .pair { grid-template-columns: 1fr; gap: 36px; }
+  .videos { grid-template-columns: 1fr; gap: 18px; }
+  .video__play { width: 62px; height: 62px; margin: -31px 0 0 -31px; }
+  .video__play svg { width: 26px; height: 26px; }
   .clients__row { grid-template-columns: repeat(2, 1fr); }
   .phase { grid-template-columns: 1fr; gap: 18px; }
 }
@@ -921,9 +920,9 @@ form {
   .flow__step::after { display: none; }
   .section-head h2, .apply__copy h2 { font-size: 28px; }
   .card, form, .app, .phase, .rail, .pair__card { padding: 22px; }
+  .videos { gap: 14px; }
   .video__play { width: 54px; height: 54px; margin: -27px 0 0 -27px; }
   .video__play svg { width: 23px; height: 23px; }
-  .video__label { left: 16px; right: 16px; bottom: 14px; font-size: 13.5px; }
   .sent { padding: 34px 22px; }
   .faq p { padding-right: 10px; }
 }

@@ -100,7 +100,7 @@ enviaría; habría que volver al mail prellenado.
 | Texto de la confirmación en pantalla | función `mostrarExito` en `script.js` |
 | Links a las apps | buscar `vercel.app` en `index.html` |
 | Logos de clientes | sección `.clients` de `index.html` + archivos en `assets/` |
-| El video de la clase | atributo `data-video` del `<button class="video">` en `index.html`: va el ID de YouTube, los 11 caracteres que siguen a `youtu.be/` |
+| Los videos de las clases | sección `#clase` de `index.html` |
 | Las 24 herramientas por fase | sección `#fases` de `index.html` |
 
 ### Pasar la postulación a un Microsoft Form
@@ -114,15 +114,30 @@ window.open('https://forms.office.com/...', '_blank', 'noopener');
 
 y borrar `api/postular.js`.
 
-## El video de la clase
+## Los videos de las clases
 
 No se usa el `<iframe>` de YouTube directamente: cargaría más de 1 MB de
 JavaScript de Google y dejaría cookies de rastreo en cada visita, aunque nadie
 le dé play. En su lugar hay una **fachada**: se muestra la miniatura del video
 y recién al hacer click se inserta el reproductor, desde `youtube-nocookie.com`.
 
-Para cambiar el video alcanza con reemplazar el ID en tres lugares del
-`<button class="video">`: el `data-video` y las dos URLs de la miniatura.
+La sección `#clase` muestra los videos en una grilla de dos columnas, que pasa
+a una sola columna en pantallas chicas.
+
+### Agregar, quitar o cambiar un video
+
+El JavaScript recorre **todos** los `.video` de la página, así que no hay nada
+que tocar fuera del HTML. Para sumar uno, copiar un bloque `<button class="video">`
+entero dentro de `<div class="videos">` y reemplazar el **ID de YouTube** en los
+tres lugares donde aparece: el `data-video` y las dos URLs de la miniatura.
+
+El ID son los 11 caracteres que siguen a `youtu.be/` en el link para compartir.
+En `https://youtu.be/hx4YluwhCkI?si=...` el ID es `hx4YluwhCkI`; lo que va
+después del `?` se descarta.
+
+Con tres o más videos conviene pasar la grilla a tres columnas, en la regla
+`.videos` de `styles.css`.
+
 El video tiene que ser **público o no listado** — uno privado muestra "Video no
 disponible" a cualquiera que no sea su dueño.
 
