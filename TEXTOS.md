@@ -72,7 +72,7 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 > 2 semanas
 
 **2.11** _(párrafo)_
-> De formación: teoría, práctica y la presentación del proyecto de cada candidato.
+> De formación: método DMAIC, gestión del cambio y la presentación del proyecto de cada candidato.
 
 ## 3. Banda de clientes
 
@@ -212,7 +212,7 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 > Formación
 
 **6.9** _(párrafo)_
-> Dos semanas de teoría y práctica sobre el método DMAIC, y la presentación del proyecto de cada candidato ante el grupo.
+> Dos semanas de teoría y práctica: el método DMAIC, gestión del cambio con Kotter y ADKAR, y la presentación del proyecto de cada candidato.
 
 **6.10** _(rótulo)_
 > DESPUÉS
@@ -256,369 +256,458 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 **6.23** _(párrafo)_
 > El dueño del proceso que vas a intervenir. Avala el alcance desde la evaluación de factibilidad previa, destraba los recursos y las decisiones que el proyecto necesita, y se queda con la mejora cuando el proyecto cierra.
 
-## 7. Los videos de las clases
+## 7. Gestión del cambio
 
 **7.1** _(rótulo)_
-> Las clases
+> Gestión del cambio
 
 **7.2** _(título)_
-> Ejemplos de clases.
+> Una mejora que nadie adopta no ahorra nada.
 
 **7.3** _(párrafo)_
-> Así se enseña el método: con el caso sobre la mesa y las herramientas aplicándose en vivo.
+> El análisis puede estar impecable y el proyecto fracasar igual, porque el turno de la noche siguió trabajando como siempre. Por eso las dos semanas de formación no son solo estadística: también se enseña a conducir el cambio, con los dos modelos que mejor se complementan.
 
-## 8. Las 5 fases
+**7.4** _(etiqueta)_
+> Kotter · 8 pasos
+
+**7.5** _(título)_
+> El cambio visto desde la organización
+
+**7.6** _(párrafo)_
+> Cómo se lidera un cambio para que avance y no se apague a mitad de camino. Es la secuencia que ordena el esfuerzo colectivo.
+
+**7.7** _(herramienta)_
+> 1. Crear sentido de urgencia
+
+**7.8** _(herramienta)_
+> 2. Formar la coalición que conduce
+
+**7.9** _(herramienta)_
+> 3. Construir la visión del cambio
+
+**7.10** _(herramienta)_
+> 4. Comunicarla hasta el cansancio
+
+**7.11** _(herramienta)_
+> 5. Remover los obstáculos
+
+**7.12** _(herramienta)_
+> 6. Asegurar victorias de corto plazo
+
+**7.13** _(herramienta)_
+> 7. Consolidar y seguir avanzando
+
+**7.14** _(herramienta)_
+> 8. Anclarlo en la cultura
+
+**7.15** _(etiqueta)_
+> ADKAR · 5 estados
+
+**7.16** _(título)_
+> El cambio visto desde cada persona
+
+**7.17** _(párrafo)_
+> Por dónde va cada individuo en su propia adopción. Sirve para diagnosticar en qué letra se trabó alguien, en vez de insistir con más comunicación.
+
+**7.18** _(ítem)_
+> A
+
+**7.19** _(ítem)_
+> Awareness Sabe que el cambio existe y por qué
+
+**7.20** _(ítem)_
+> D
+
+**7.21** _(ítem)_
+> Desire Quiere participar y apoyarlo
+
+**7.22** _(ítem)_
+> K
+
+**7.23** _(ítem)_
+> Knowledge Sabe cómo trabajar de la nueva forma
+
+**7.24** _(ítem)_
+> Ability Puede hacerlo en la práctica, no solo en teoría
+
+**7.25** _(ítem)_
+> R
+
+**7.26** _(ítem)_
+> Reinforcement Lo sostiene cuando nadie está mirando
+
+**7.27** _(párrafo)_
+> No es un apéndice teórico: dos de las 24 herramientas de la fase Definir — análisis de stakeholders y plan de comunicación — son justamente de gestión del cambio, y el plan de control de la fase Controlar solo se sostiene si la gente adoptó la nueva forma de trabajar.
+
+## 8. Los videos de las clases
 
 **8.1** _(rótulo)_
-> Las 5 fases
+> Las clases
 
 **8.2** _(título)_
-> Las herramientas de cada etapa:
+> Ejemplos de clases.
 
 **8.3** _(párrafo)_
-> No se enseñan como catálogo: se usan cuando la fase las pide. Todas están implementadas en la app del programa, con los cálculos automáticos resueltos (RPN, Cp/Cpk, nivel sigma, payback).
+> Así se enseña el método: con el caso sobre la mesa y las herramientas aplicándose en vivo.
 
-**8.4** _(párrafo)_
-> Fase 1
-
-**8.5** _(título)_
-> Definir
-
-**8.6** _(herramienta)_
-> Project Charter
-
-**8.7** _(herramienta)_
-> SIPOC
-
-**8.8** _(herramienta)_
-> Análisis de stakeholders
-
-**8.9** _(herramienta)_
-> Plan de comunicación
-
-**8.10** _(herramienta)_
-> Diagrama de proceso
-
-**8.11** _(herramienta)_
-> Árbol CTQ
-
-**8.12** _(párrafo)_
-> Fase 2
-
-**8.13** _(título)_
-> Medir
-
-**8.14** _(herramienta)_
-> Plan de recolección de datos
-
-**8.15** _(herramienta)_
-> Mapa de proceso detallado
-
-**8.16** _(herramienta)_
-> Gráfico de la Y
-
-**8.17** _(herramienta)_
-> Quick wins
-
-**8.18** _(herramienta)_
-> Ishikawa
-
-**8.19** _(herramienta)_
-> CPK actual
-
-**8.20** _(párrafo)_
-> Fase 3
-
-**8.21** _(título)_
-> Analizar
-
-**8.22** _(herramienta)_
-> 5 Porqués
-
-**8.23** _(herramienta)_
-> Matriz C&E
-
-**8.24** _(herramienta)_
-> FMEA
-
-**8.25** _(herramienta)_
-> Variables X priorizadas
-
-**8.26** _(párrafo)_
-> Fase 4
-
-**8.27** _(título)_
-> Mejorar
-
-**8.28** _(herramienta)_
-> Matriz Pugh
-
-**8.29** _(herramienta)_
-> Matriz de priorización
-
-**8.30** _(herramienta)_
-> CPK post mejora
-
-**8.31** _(herramienta)_
-> Proceso futuro
-
-**8.32** _(párrafo)_
-> Fase 5
-
-**8.33** _(título)_
-> Controlar
-
-**8.34** _(herramienta)_
-> Plan de control
-
-**8.35** _(herramienta)_
-> Plan de auditorías
-
-**8.36** _(herramienta)_
-> RACI
-
-**8.37** _(herramienta)_
-> Validación de impacto financiero
-
-## 9. Las apps
+## 9. Las 5 fases
 
 **9.1** _(rótulo)_
-> Las herramientas digitales
+> Las 5 fases
 
 **9.2** _(título)_
-> Dos aplicaciones. Una para practicar, otra para ejecutar.
+> Las herramientas de cada etapa:
 
 **9.3** _(párrafo)_
-> El programa NO se lleva en un Excel que cada uno guarda en su carpeta. Hay una única fuente para tu proyecto, y un simulador para equivocarte antes, donde no cuesta nada.
+> No se enseñan como catálogo: se usan cuando la fase las pide. Todas están implementadas en la app del programa, con los cálculos automáticos resueltos (RPN, Cp/Cpk, nivel sigma, payback).
 
-**9.4** _(título)_
-> My GreenBelt Project
+**9.4** _(párrafo)_
+> Fase 1
 
-**9.5** _(párrafo)_
-> Donde vive tu proyecto de principio a fin. Reemplaza el Excel del charter y le da gobierno al programa.
+**9.5** _(título)_
+> Definir
 
-**9.6** _(ítem)_
-> Charter y las 24 herramientas de las cinco fases en un solo lugar
+**9.6** _(herramienta)_
+> Project Charter
 
-**9.7** _(ítem)_
-> Tollgates con puntaje y feedback del coach; la fase avanza sola al aprobarse
+**9.7** _(herramienta)_
+> SIPOC
 
-**9.8** _(ítem)_
-> Métricas con línea de base de 3 meses y cálculo de ahorro anualizado
+**9.8** _(herramienta)_
+> Análisis de stakeholders
 
-**9.9** _(ítem)_
-> Tablero de la clase: avance de los proyectos y ahorro consolidado
+**9.9** _(herramienta)_
+> Plan de comunicación
 
-**9.10** _(ítem)_
-> Disponible en español, inglés y portugués
+**9.10** _(herramienta)_
+> Diagrama de proceso
 
-**9.11** _(botón)_
-> Abrir MyGreenBeltProject
+**9.11** _(herramienta)_
+> Árbol CTQ
 
-**9.12** _(título)_
-> Sigma Sim
+**9.12** _(párrafo)_
+> Fase 2
 
-**9.13** _(párrafo)_
-> Una simulación del proceso DMAIC sobre un caso de estudio real: recorrés el método completo antes de aplicarlo a tu propio proceso.
+**9.13** _(título)_
+> Medir
 
-**9.14** _(ítem)_
-> Caso de estudio real, con sus datos y sus decisiones
+**9.14** _(herramienta)_
+> Plan de recolección de datos
 
-**9.15** _(ítem)_
-> Recorrés las cinco fases de punta a punta sin riesgo
+**9.15** _(herramienta)_
+> Mapa de proceso detallado
 
-**9.16** _(ítem)_
-> Entrenás el criterio: qué herramienta usar y cuándo
+**9.16** _(herramienta)_
+> Gráfico de la Y
 
-**9.17** _(ítem)_
-> Ideal antes del primer tollgate de tu proyecto
+**9.17** _(herramienta)_
+> Quick wins
 
-**9.18** _(botón)_
-> Abrir Sigma Sim
+**9.18** _(herramienta)_
+> Ishikawa
 
-## 10. Certificación
+**9.19** _(herramienta)_
+> CPK actual
+
+**9.20** _(párrafo)_
+> Fase 3
+
+**9.21** _(título)_
+> Analizar
+
+**9.22** _(herramienta)_
+> 5 Porqués
+
+**9.23** _(herramienta)_
+> Matriz C&E
+
+**9.24** _(herramienta)_
+> FMEA
+
+**9.25** _(herramienta)_
+> Variables X priorizadas
+
+**9.26** _(párrafo)_
+> Fase 4
+
+**9.27** _(título)_
+> Mejorar
+
+**9.28** _(herramienta)_
+> Matriz Pugh
+
+**9.29** _(herramienta)_
+> Matriz de priorización
+
+**9.30** _(herramienta)_
+> CPK post mejora
+
+**9.31** _(herramienta)_
+> Proceso futuro
+
+**9.32** _(párrafo)_
+> Fase 5
+
+**9.33** _(título)_
+> Controlar
+
+**9.34** _(herramienta)_
+> Plan de control
+
+**9.35** _(herramienta)_
+> Plan de auditorías
+
+**9.36** _(herramienta)_
+> RACI
+
+**9.37** _(herramienta)_
+> Validación de impacto financiero
+
+## 10. Las apps
 
 **10.1** _(rótulo)_
-> La certificación
+> Las herramientas digitales
 
 **10.2** _(título)_
-> El criterio de aprobación.
+> Dos aplicaciones. Una para practicar, otra para ejecutar.
 
 **10.3** _(párrafo)_
-> La certificación se emite cuando el proyecto está cerrado y el impacto validado
+> El programa NO se lleva en un Excel que cada uno guarda en su carpeta. Hay una única fuente para tu proyecto, y un simulador para equivocarte antes, donde no cuesta nada.
 
-**10.4** _(PENDIENTE)_
-> COMPLETAR: quién emite la certificación
-
-**10.5** _(párrafo)_
-> . El recorrido queda documentado en la app, tollgate por tollgate.
-
-**10.6** _(párrafo)_
-> Los cinco tollgates aprobados
-
-**10.7** _(párrafo)_
-> Cada fase revisada y firmada por tu coach, con las herramientas obligatorias completas.
-
-**10.8** _(párrafo)_
-> Impacto financiero validado
-
-**10.9** _(párrafo)_
-> El ahorro anualizado calculado en la fase de Controlar y revisado con Finanzas.
-
-**10.10** _(párrafo)_
-> Plan de Controlar vigente
-
-**10.11** _(párrafo)_
-> La mejora tiene dueño, frecuencia de auditoría y un RACI definido antes de cerrar.
-
-**10.12** _(párrafo)_
-> Evaluación del método
-
-**10.13** _(PENDIENTE)_
-> COMPLETAR: criterio de examen
-
-**10.14** _(párrafo)_
-> Definir si la certificación incluye examen teórico, con qué nota mínima y en qué momento.
-
-## 11. Preguntas frecuentes
-
-**11.1** _(rótulo)_
-> Preguntas frecuentes
-
-**11.2** _(título)_
-> Lo que todos preguntan antes de anotarse.
-
-**11.3** _(pregunta)_
-> ¿Necesito saber estadística para entrar?
-
-**11.4** _(párrafo)_
-> No. La formación cubre lo que vas a usar y la app resuelve los cálculos (Cp/Cpk, nivel sigma, RPN del FMEA, scoring de matrices). Lo que sí necesitás es estar dispuesto a decidir con datos en lugar de con intuición.
-
-**11.5** _(pregunta)_
-> ¿Cuánto tiempo me demanda por semana?
-
-**11.6** _(párrafo)_
-> La formación son dos semanas completas: teoría, práctica y la presentación de tu proyecto. Después, el proyecto corre en paralelo a tu trabajo con el acompañamiento del coach
-
-**11.7** _(PENDIENTE)_
-> COMPLETAR: dedicación semanal estimada
-
-**11.8** _(párrafo)_
-> . Acordá esas horas con tu sponsor antes de postularte: es la causa número uno de proyectos que se estancan.
-
-**11.9** _(pregunta)_
-> ¿Puedo postularme sin tener el proyecto definido?
-
-**11.10** _(párrafo)_
-> Sí. Alcanza con traer un problema que te duela y que se pueda medir. Antes del inicio hay una preselección donde evaluamos la factibilidad de cada proyecto junto con el sponsor: si el problema es demasiado grande o no se puede medir, lo reformulamos ahí, no a mitad de camino.
-
-**11.11** _(pregunta)_
-> ¿Qué pasa si mi proyecto se traba?
-
-**11.12** _(párrafo)_
-> Para eso está el coach. El tollgate puede rechazarse con feedback y volvés sobre la fase; es parte del método, no un castigo. Lo que no se hace es avanzar con una fase mal resuelta, porque el error se arrastra hasta el final.
-
-**11.13** _(pregunta)_
-> ¿Quién aprueba mis fases?
-
-**11.14** _(párrafo)_
-> Tu coach, que es un Master Black Belt o instructor asignado a tu clase. No podés aprobar tu propio tollgate ni elegir quién te revisa: lo impide la propia aplicación.
-
-**11.15** _(pregunta)_
-> ¿En qué idioma se dicta?
-
-**11.16** _(párrafo)_
-> El programa se dicta en español. La app MyGreenBeltProject está disponible en español, inglés y portugués, así que un candidato de Brasil puede trabajar su proyecto en portugués.
-
-**11.17** _(pregunta)_
-> ¿Cuándo empieza la próxima clase?
-
-**11.18** _(PENDIENTE)_
-> COMPLETAR: calendario de clases y cupos
-
-**11.19** _(párrafo)_
-> Las clases tienen cupo limitado. Dejá tu postulación y te confirmamos fecha de inicio y disponibilidad.
-
-## 12. Postulación
-
-**12.1** _(rótulo)_
-> Postulación
-
-**12.2** _(título)_
-> Contanos qué querés arreglar.
-
-**12.3** _(párrafo)_
-> No hace falta que esté prolijo. Con el problema en una frase y tu contexto alcanza para empezar la conversación.
-
-**12.4** _(campo)_
-> Nombre y apellido
-
-**12.5** _(campo)_
-> Email corporativo
-
-**12.6** _(campo)_
-> Planta / sitio
-
-**12.7** _(campo)_
-> Función
-
-**12.8** _(opción)_
-> Ingeniería de proceso Producción / Supervisión Calidad Supply Chain / Planning Mejora continua Finanzas Otra
-
-**12.9** _(campo)_
-> ¿Qué problema querrías atacar?
-
-**12.10** _(ayuda)_
-> Dos o tres líneas alcanzan. Si todavía no lo tenés claro, escribí el síntoma.
-
-**12.11** _(campo)_
-> Sponsor propuesto
-
-**12.12** _(campo)_
-> (opcional)
-
-**12.13** _(botón)_
-> Enviar postulación
-
-**12.14** _(ayuda)_
-> Te confirmamos la recepción en pantalla. No se abre tu cliente de correo.
-
-## 13. Pie de página
-
-**13.1** _(párrafo)_
-> Programa Lean Six Sigma Green Belt · Certificación con proyecto real
-
-**13.2** _(link del pie)_
+**10.4** _(título)_
 > My GreenBelt Project
 
-**13.3** _(link del pie)_
+**10.5** _(párrafo)_
+> Donde vive tu proyecto de principio a fin. Reemplaza el Excel del charter y le da gobierno al programa.
+
+**10.6** _(ítem)_
+> Charter y las 24 herramientas de las cinco fases en un solo lugar
+
+**10.7** _(ítem)_
+> Tollgates con puntaje y feedback del coach; la fase avanza sola al aprobarse
+
+**10.8** _(ítem)_
+> Métricas con línea de base de 3 meses y cálculo de ahorro anualizado
+
+**10.9** _(ítem)_
+> Tablero de la clase: avance de los proyectos y ahorro consolidado
+
+**10.10** _(ítem)_
+> Disponible en español, inglés y portugués
+
+**10.11** _(botón)_
+> Abrir MyGreenBeltProject
+
+**10.12** _(título)_
 > Sigma Sim
 
-**13.4** _(link del pie)_
+**10.13** _(párrafo)_
+> Una simulación del proceso DMAIC sobre un caso de estudio real: recorrés el método completo antes de aplicarlo a tu propio proceso.
+
+**10.14** _(ítem)_
+> Caso de estudio real, con sus datos y sus decisiones
+
+**10.15** _(ítem)_
+> Recorrés las cinco fases de punta a punta sin riesgo
+
+**10.16** _(ítem)_
+> Entrenás el criterio: qué herramienta usar y cuándo
+
+**10.17** _(ítem)_
+> Ideal antes del primer tollgate de tu proyecto
+
+**10.18** _(botón)_
+> Abrir Sigma Sim
+
+## 11. Certificación
+
+**11.1** _(rótulo)_
+> La certificación
+
+**11.2** _(título)_
+> El criterio de aprobación.
+
+**11.3** _(párrafo)_
+> La certificación se emite cuando el proyecto está cerrado y el impacto validado
+
+**11.4** _(PENDIENTE)_
+> COMPLETAR: quién emite la certificación
+
+**11.5** _(párrafo)_
+> . El recorrido queda documentado en la app, tollgate por tollgate.
+
+**11.6** _(párrafo)_
+> Los cinco tollgates aprobados
+
+**11.7** _(párrafo)_
+> Cada fase revisada y firmada por tu coach, con las herramientas obligatorias completas.
+
+**11.8** _(párrafo)_
+> Impacto financiero validado
+
+**11.9** _(párrafo)_
+> El ahorro anualizado calculado en la fase de Controlar y revisado con Finanzas.
+
+**11.10** _(párrafo)_
+> Plan de Controlar vigente
+
+**11.11** _(párrafo)_
+> La mejora tiene dueño, frecuencia de auditoría y un RACI definido antes de cerrar.
+
+**11.12** _(párrafo)_
+> Evaluación del método
+
+**11.13** _(PENDIENTE)_
+> COMPLETAR: criterio de examen
+
+**11.14** _(párrafo)_
+> Definir si la certificación incluye examen teórico, con qué nota mínima y en qué momento.
+
+## 12. Preguntas frecuentes
+
+**12.1** _(rótulo)_
+> Preguntas frecuentes
+
+**12.2** _(título)_
+> Lo que todos preguntan antes de anotarse.
+
+**12.3** _(pregunta)_
+> ¿Necesito saber estadística para entrar?
+
+**12.4** _(párrafo)_
+> No. La formación cubre lo que vas a usar y la app resuelve los cálculos (Cp/Cpk, nivel sigma, RPN del FMEA, scoring de matrices). Lo que sí necesitás es estar dispuesto a decidir con datos en lugar de con intuición.
+
+**12.5** _(pregunta)_
+> ¿Cuánto tiempo me demanda por semana?
+
+**12.6** _(párrafo)_
+> La formación son dos semanas completas: teoría, práctica y la presentación de tu proyecto. Después, el proyecto corre en paralelo a tu trabajo con el acompañamiento del coach
+
+**12.7** _(PENDIENTE)_
+> COMPLETAR: dedicación semanal estimada
+
+**12.8** _(párrafo)_
+> . Acordá esas horas con tu sponsor antes de postularte: es la causa número uno de proyectos que se estancan.
+
+**12.9** _(pregunta)_
+> ¿Puedo postularme sin tener el proyecto definido?
+
+**12.10** _(párrafo)_
+> Sí. Alcanza con traer un problema que te duela y que se pueda medir. Antes del inicio hay una preselección donde evaluamos la factibilidad de cada proyecto junto con el sponsor: si el problema es demasiado grande o no se puede medir, lo reformulamos ahí, no a mitad de camino.
+
+**12.11** _(pregunta)_
+> ¿Qué pasa si mi proyecto se traba?
+
+**12.12** _(párrafo)_
+> Para eso está el coach. El tollgate puede rechazarse con feedback y volvés sobre la fase; es parte del método, no un castigo. Lo que no se hace es avanzar con una fase mal resuelta, porque el error se arrastra hasta el final.
+
+**12.13** _(pregunta)_
+> ¿Por qué un programa Six Sigma enseña gestión del cambio?
+
+**12.14** _(párrafo)_
+> Porque una solución técnicamente correcta que nadie adopta no ahorra nada. La fase de Controlar existe para que la mejora se sostenga, y eso depende de personas que cambiaron su forma de trabajar, no del plan de control en sí. Se ven los 8 pasos de Kotter para conducir el cambio y ADKAR para diagnosticar dónde se traba cada persona.
+
+**12.15** _(pregunta)_
+> ¿Quién aprueba mis fases?
+
+**12.16** _(párrafo)_
+> Tu coach, que es un Master Black Belt o instructor asignado a tu clase. No podés aprobar tu propio tollgate ni elegir quién te revisa: lo impide la propia aplicación.
+
+**12.17** _(pregunta)_
+> ¿En qué idioma se dicta?
+
+**12.18** _(párrafo)_
+> El programa se dicta en español. La app MyGreenBeltProject está disponible en español, inglés y portugués, así que un candidato de Brasil puede trabajar su proyecto en portugués.
+
+**12.19** _(pregunta)_
+> ¿Cuándo empieza la próxima clase?
+
+**12.20** _(PENDIENTE)_
+> COMPLETAR: calendario de clases y cupos
+
+**12.21** _(párrafo)_
+> Las clases tienen cupo limitado. Dejá tu postulación y te confirmamos fecha de inicio y disponibilidad.
+
+## 13. Postulación
+
+**13.1** _(rótulo)_
+> Postulación
+
+**13.2** _(título)_
+> Contanos qué querés arreglar.
+
+**13.3** _(párrafo)_
+> No hace falta que esté prolijo. Con el problema en una frase y tu contexto alcanza para empezar la conversación.
+
+**13.4** _(campo)_
+> Nombre y apellido
+
+**13.5** _(campo)_
+> Email corporativo
+
+**13.6** _(campo)_
+> Planta / sitio
+
+**13.7** _(campo)_
+> Función
+
+**13.8** _(opción)_
+> Ingeniería de proceso Producción / Supervisión Calidad Supply Chain / Planning Mejora continua Finanzas Otra
+
+**13.9** _(campo)_
+> ¿Qué problema querrías atacar?
+
+**13.10** _(ayuda)_
+> Dos o tres líneas alcanzan. Si todavía no lo tenés claro, escribí el síntoma.
+
+**13.11** _(campo)_
+> Sponsor propuesto
+
+**13.12** _(campo)_
+> (opcional)
+
+**13.13** _(botón)_
+> Enviar postulación
+
+**13.14** _(ayuda)_
+> Te confirmamos la recepción en pantalla. No se abre tu cliente de correo.
+
+## 14. Pie de página
+
+**14.1** _(párrafo)_
+> Programa Lean Six Sigma Green Belt · Certificación con proyecto real
+
+**14.2** _(link del pie)_
+> My GreenBelt Project
+
+**14.3** _(link del pie)_
+> Sigma Sim
+
+**14.4** _(link del pie)_
 > Postularme
 
-## 14. Textos de ejemplo dentro de los campos del formulario
+## 15. Textos de ejemplo dentro de los campos del formulario
 
-**14.1** _(ejemplo gris)_
+**15.1** _(ejemplo gris)_
 > Damián Rotondi
 
-**14.2** _(ejemplo gris)_
+**15.2** _(ejemplo gris)_
 > nombre@empresa.com
 
-**14.3** _(ejemplo gris)_
+**15.3** _(ejemplo gris)_
 > Ej. Buenos Aires
 
-**14.4** _(ejemplo gris)_
+**15.4** _(ejemplo gris)_
 > Ej.: el scrap de la línea 3 pasó de 4% a 7% en los últimos seis meses y no sabemos por qué.
 
-**14.5** _(ejemplo gris)_
+**15.5** _(ejemplo gris)_
 > Quién avalaría el proyecto
 
-## 15. Textos que no se ven en la página (pestaña del navegador y vista previa del link)
+## 16. Textos que no se ven en la página (pestaña del navegador y vista previa del link)
 
-**15.1** _(título de la pestaña del navegador)_
+**16.1** _(título de la pestaña del navegador)_
 > Programa Green Belt — Lean Six Sigma
 
-**15.2** _(descripción para buscadores y al compartir el link)_
-> Formación y certificación Lean Six Sigma Green Belt: dos semanas de teoría y práctica, y el método DMAIC aplicado a un proyecto real de tu planta, con coach y sponsor.
+**16.2** _(descripción para buscadores y al compartir el link)_
+> Formación y certificación Lean Six Sigma Green Belt: dos semanas de DMAIC y gestión del cambio (Kotter y ADKAR), aplicadas a un proyecto real de tu planta, con coach y sponsor.
 

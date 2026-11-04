@@ -555,6 +555,54 @@ img, svg { max-width: 100%; }
 .pair__card h4 { font-size: 19px; margin-bottom: 8px; }
 .pair__card p { font-size: 15px; color: var(--ink-muted); line-height: 1.58; }
 
+/* --- Gestión del cambio ----------------------------------------------------
+   Reutiliza .pair (las tarjetas de coach/sponsor) y .tools (las listas de la
+   sección de fases). Solo agrega la lista con la letra de ADKAR y la nota.   */
+
+.pair__card .tools,
+.pair__card .adkars { margin-top: 18px; }
+
+.adkars { display: grid; gap: 11px; }
+
+.adkar {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--ink-muted);
+}
+.adkar__k {
+  flex: 0 0 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 22px;
+}
+.adkar b {
+  display: block;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cambio__nota {
+  margin-top: 24px;
+  padding: 18px 22px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+.cambio__nota strong { color: var(--ink); font-weight: 600; }
+
 /* --- Fases DMAIC ---------------------------------------------------------- */
 
 .phases {
@@ -997,6 +1045,7 @@ form {
   .flow__step::after { display: none; }
   .section-head h2, .apply__copy h2 { font-size: 28px; }
   .card, form, .app, .rail, .pair__card { padding: 22px; }
+  .cambio__nota { padding: 16px 18px; font-size: 14.5px; }
   .phase { padding: 20px; }
 
   .deco--chart, .deco--ring { display: none; }
