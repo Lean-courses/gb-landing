@@ -88,23 +88,45 @@ const DESTINO_POSTULACIONES = 'drotondi@gmail.com';
   const links = Array.from(document.querySelectorAll('.nav__links a'));
   if (!links.length || !('IntersectionObserver' in window)) return;
 
+  // Un link puede cubrir más de una sección: "El método" abarca las fases
+  // DMAIC y gestión del cambio. Eso se declara con data-sections en el HTML.
   const byId = new Map();
   links.forEach((a) => {
-    const id = a.getAttribute('href').slice(1);
-    const section = document.getElementById(id);
-    if (section) byId.set(section, a);
+    const ids = (a.dataset.sections || a.getAttribute('href').slice(1)).split(/\s+/);
+    ids.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) byId.set(section, a);
+    });
   });
+  if (!byId.size) return;
+
+  // Varias secciones pueden estar intersecando a la vez, sobre todo al saltar
+  // con un ancla. Guardamos todas y elegimos la que está más cerca del centro
+  // de la pantalla, en vez de confiar en el orden en que llegan los avisos.
+  const visibles = new Set();
+
+  function marcar() {
+    if (!visibles.size) return;
+    const centro = window.innerHeight / 2;
+    let mejor = null, menor = Infinity;
+    visibles.forEach((sec) => {
+      const r = sec.getBoundingClientRect();
+      const d = Math.abs((r.top + r.bottom) / 2 - centro);
+      if (d < menor) { menor = d; mejor = sec; }
+    });
+    const activo = byId.get(mejor);
+    links.forEach((a) => a.classList.toggle('is-active', a === activo));
+  }
 
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        links.forEach((a) => a.classList.remove('is-active'));
-        const active = byId.get(entry.target);
-        if (active) active.classList.add('is-active');
+      entries.forEach((e) => {
+        if (e.isIntersecting) visibles.add(e.target);
+        else visibles.delete(e.target);
       });
+      marcar();
     },
-    { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
+    { rootMargin: '-25% 0px -25% 0px', threshold: 0 }
   );
 
   byId.forEach((_, section) => observer.observe(section));

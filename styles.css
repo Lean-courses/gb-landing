@@ -354,6 +354,7 @@ img, svg { max-width: 100%; }
 .grid { display: grid; gap: 22px; }
 .grid--2 { grid-template-columns: repeat(2, 1fr); }
 .grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
 
 .card {
   background: var(--bg-card);
@@ -362,6 +363,9 @@ img, svg { max-width: 100%; }
   padding: 28px;
 }
 .card h3 { font-size: 20px; margin-bottom: 10px; }
+.grid--4 .card { padding: 24px 22px; }
+.grid--4 .card h3 { font-size: 18.5px; }
+.grid--4 .card p { font-size: 15px; }
 .card p { color: var(--ink-muted); font-size: 16px; }
 
 .card--plain {
@@ -999,7 +1003,7 @@ form {
   .hero__lead { font-size: 18.5px; }
   .section { padding: 80px 0; }
   .section-head h2, .apply__copy h2 { font-size: 32px; }
-  .grid--3, .roles, .reqs { grid-template-columns: repeat(2, 1fr); }
+  .grid--3, .grid--4, .roles, .reqs { grid-template-columns: repeat(2, 1fr); }
   .roles .role:nth-child(3n) { border-right: 1px solid var(--line); }
   .roles .role:nth-child(2n) { border-right: 0; }
   .roles .role:nth-last-child(-n+3) { border-bottom: 1px solid var(--line); }
@@ -1035,7 +1039,7 @@ form {
   .hero h1 { font-size: 36px; max-width: none; }
   .hero__actions .btn { width: 100%; }
   .facts { grid-template-columns: 1fr; gap: 22px; margin-top: 48px; }
-  .grid--2, .grid--3, .roles, .reqs, .flow, .field-row { grid-template-columns: 1fr; }
+  .grid--2, .grid--3, .grid--4, .roles, .reqs, .flow, .field-row { grid-template-columns: 1fr; }
   .clients__row { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .client { height: 54px; }
   .role { border-right: 0 !important; border-bottom: 1px solid var(--line) !important; }

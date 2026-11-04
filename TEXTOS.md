@@ -28,7 +28,7 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 > Cómo funciona
 
 **1.6** _(link del menú)_
-> Las 5 fases
+> El método
 
 **1.7** _(link del menú)_
 > Las apps
@@ -112,12 +112,21 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 > Definís el alcance y el caso de negocio, medís la línea de base, probás con datos cuál es la causa raíz, diseñás la mejora y la blindás con un plan de control.
 
 **4.10** _(rótulo)_
-> 03 — El resultado
+> 03 — La adopción
 
 **4.11** _(título)_
-> Un valor validado y certificado por Finanzas
+> Que la mejora sobreviva al cambio de turno
 
 **4.12** _(párrafo)_
+> No alcanza con que el proceso nuevo sea mejor: alguien tiene que dejar de hacerlo como lo viene haciendo hace años. Kotter y ADKAR dan el método para conducir esa parte, que es donde la mayoría de los proyectos se cae.
+
+**4.13** _(rótulo)_
+> 04 — El resultado
+
+**4.14** _(título)_
+> Un valor validado y certificado por Finanzas
+
+**4.15** _(párrafo)_
 > El proyecto cierra con el ahorro anualizado calculado y validado. No es un curso más colgado en la pared: es una mejora que el P&L reconoce.
 
 ## 5. A quién está dirigido
