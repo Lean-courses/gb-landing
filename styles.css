@@ -551,6 +551,90 @@ img, svg { max-width: 100%; }
   white-space: nowrap;
 }
 
+/* --- Video de la clase -----------------------------------------------------
+   Fachada: se muestra la miniatura y recién al hacer click se inserta el
+   reproductor. Así YouTube no carga su JavaScript ni deja cookies en cada
+   visita, solo cuando alguien decide mirar.                                 */
+
+.video {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color .16s ease;
+}
+.video:hover { border-color: var(--line-strong); }
+
+.video__thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Oscurece la base para que el rótulo se lea sobre cualquier miniatura. */
+.video__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+              rgba(20, 18, 17, .12) 0%,
+              rgba(20, 18, 17, 0) 38%,
+              rgba(20, 18, 17, .55) 100%);
+}
+
+.video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 72px;
+  height: 72px;
+  margin: -36px 0 0 -36px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 22px rgba(20, 18, 17, .26);
+  transition: transform .16s ease, background .16s ease;
+}
+.video__play svg { width: 30px; height: 30px; margin-left: 3px; }
+.video:hover .video__play { transform: scale(1.06); background: var(--accent-ink); }
+.video:active .video__play { transform: scale(.98); }
+
+.video__label {
+  position: absolute;
+  left: 22px;
+  bottom: 18px;
+  right: 22px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 550;
+  text-align: left;
+  text-shadow: 0 1px 10px rgba(20, 18, 17, .5);
+}
+
+/* Una vez reproduciendo, el iframe hereda el mismo marco: sin salto. */
+.video.is-playing {
+  cursor: default;
+  border-color: var(--line);
+}
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 /* --- Apps ----------------------------------------------------------------- */
 
 .apps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
@@ -837,6 +921,9 @@ form {
   .flow__step::after { display: none; }
   .section-head h2, .apply__copy h2 { font-size: 28px; }
   .card, form, .app, .phase, .rail, .pair__card { padding: 22px; }
+  .video__play { width: 54px; height: 54px; margin: -27px 0 0 -27px; }
+  .video__play svg { width: 23px; height: 23px; }
+  .video__label { left: 16px; right: 16px; bottom: 14px; font-size: 13.5px; }
   .sent { padding: 34px 22px; }
   .faq p { padding-right: 10px; }
 }

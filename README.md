@@ -100,6 +100,7 @@ enviaría; habría que volver al mail prellenado.
 | Texto de la confirmación en pantalla | función `mostrarExito` en `script.js` |
 | Links a las apps | buscar `vercel.app` en `index.html` |
 | Logos de clientes | sección `.clients` de `index.html` + archivos en `assets/` |
+| El video de la clase | atributo `data-video` del `<button class="video">` en `index.html`: va el ID de YouTube, los 11 caracteres que siguen a `youtu.be/` |
 | Las 24 herramientas por fase | sección `#fases` de `index.html` |
 
 ### Pasar la postulación a un Microsoft Form
@@ -112,6 +113,18 @@ window.open('https://forms.office.com/...', '_blank', 'noopener');
 ```
 
 y borrar `api/postular.js`.
+
+## El video de la clase
+
+No se usa el `<iframe>` de YouTube directamente: cargaría más de 1 MB de
+JavaScript de Google y dejaría cookies de rastreo en cada visita, aunque nadie
+le dé play. En su lugar hay una **fachada**: se muestra la miniatura del video
+y recién al hacer click se inserta el reproductor, desde `youtube-nocookie.com`.
+
+Para cambiar el video alcanza con reemplazar el ID en tres lugares del
+`<button class="video">`: el `data-video` y las dos URLs de la miniatura.
+El video tiene que ser **público o no listado** — uno privado muestra "Video no
+disponible" a cualquiera que no sea su dueño.
 
 ## Pendientes de contenido
 

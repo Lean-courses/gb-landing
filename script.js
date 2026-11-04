@@ -10,7 +10,36 @@
    listener del submit por un redirect a esa URL.                             */
 const DESTINO_POSTULACIONES = 'drotondi@gmail.com';
 
-/* --- 1. Menú de pantallas chicas -------------------------------------------
+/* --- 1. Video de la clase ---------------------------------------------------
+   Hasta que alguien hace click no se pide nada a YouTube: solo está la
+   miniatura. Recién ahí se inserta el reproductor, desde el dominio
+   youtube-nocookie, y arranca solo.                                         */
+
+(function video() {
+  const caja = document.getElementById('video-clase');
+  if (!caja) return;
+
+  caja.addEventListener('click', function reproducir() {
+    const id = caja.dataset.video;
+    if (!id || caja.classList.contains('is-playing')) return;
+
+    const marco = document.createElement('iframe');
+    marco.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) +
+                '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+    marco.title = 'Una clase del programa Green Belt';
+    marco.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; ' +
+                  'gyroscope; picture-in-picture; web-share';
+    marco.allowFullscreen = true;
+
+    caja.innerHTML = '';
+    caja.appendChild(marco);
+    caja.classList.add('is-playing');
+    caja.setAttribute('aria-label', 'Video de una clase del programa, reproduciendo');
+    caja.removeEventListener('click', reproducir);
+  });
+})();
+
+/* --- 2. Menú de pantallas chicas -------------------------------------------
    El botón abre y cierra el panel de secciones. Se cierra al tocar un link,
    con Escape, tocando fuera, o al volver a una pantalla ancha.              */
 
@@ -54,7 +83,7 @@ const DESTINO_POSTULACIONES = 'drotondi@gmail.com';
   else ancha.addListener(alCambiar);          // Safari viejo
 })();
 
-/* --- 2. Nav: resaltar la sección visible ----------------------------------- */
+/* --- 3. Nav: resaltar la sección visible ----------------------------------- */
 
 (function navHighlight() {
   const links = Array.from(document.querySelectorAll('.nav__links a'));
@@ -82,7 +111,7 @@ const DESTINO_POSTULACIONES = 'drotondi@gmail.com';
   byId.forEach((_, section) => observer.observe(section));
 })();
 
-/* --- 3. Formulario de postulación ------------------------------------------
+/* --- 4. Formulario de postulación ------------------------------------------
    Envía por fetch a /api/postular, que manda el mail del lado del servidor.
    El candidato nunca sale de la página ni abre su cliente de correo.
    Si el envío falla, se le ofrece el mail prellenado como respaldo.         */
