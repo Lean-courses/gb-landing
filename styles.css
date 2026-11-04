@@ -121,6 +121,53 @@ img, svg { max-width: 100%; }
   letter-spacing: 0.02em;
 }
 
+/* --- Figuras decorativas ---------------------------------------------------
+   SVG inline, no imágenes: son formas geométricas, pesan nada y toman el color
+   de los tokens, así que siguen la paleta sola si el acento vuelve a cambiar.
+   El color se define acá y no en atributos del SVG porque var() no resuelve
+   dentro de un atributo de presentación, solo en propiedades CSS.           */
+
+.deco {
+  position: absolute;
+  pointer-events: none;     /* nunca le roban el click a nada que esté debajo */
+  z-index: 0;
+  color: var(--accent);
+}
+
+.deco__fill   { fill: currentColor; opacity: .055; }
+.deco__line   { fill: none; stroke: currentColor; stroke-width: 2; opacity: .20; }
+.deco__axis   { stroke: currentColor; stroke-width: 1.4; opacity: .16; }
+.deco__grid line { stroke: currentColor; stroke-width: 1; opacity: .12; stroke-dasharray: 3 5; }
+.deco__limit  { stroke: currentColor; stroke-width: 1.2; opacity: .14; stroke-dasharray: 6 6; }
+.deco__arcs path { fill: none; stroke: currentColor; stroke-width: 13; stroke-linecap: round; opacity: .09; }
+.deco__dot    { fill: currentColor; opacity: .10; }
+.deco__glyph  {
+  fill: currentColor;
+  opacity: .06;
+  font-family: var(--font-serif);
+  font-size: 230px;
+  font-weight: 600;
+}
+
+.deco--bell  {
+  top: 108px;
+  right: max(0px, calc((100% - var(--wide)) / 2));
+  width: 500px;
+  height: 310px;
+}
+.deco--chart { top: 44%;   left: 0; right: 0; width: 100%; height: 200px; }
+.deco--ring  { top: 52px;  right: 54px;  width: 290px; height: 290px; }
+.deco--sigma { top: 2px;   right: 72px;  width: 230px; height: 250px; }
+
+/* Las figuras van posicionadas en absoluto: sin este overflow, cualquiera que
+   se pase del borde genera scroll horizontal, que es el riesgo real de todo
+   esto. El contenido siempre por encima. */
+.hero, #programa, #fases, #certificacion { position: relative; overflow: hidden; }
+.hero > .wrap,
+#programa > .wrap,
+#fases > .wrap,
+#certificacion > .wrap { position: relative; z-index: 1; }
+
 /* --- Botones -------------------------------------------------------------- */
 
 .btn {
@@ -510,45 +557,63 @@ img, svg { max-width: 100%; }
 
 /* --- Fases DMAIC ---------------------------------------------------------- */
 
-.phases { display: grid; gap: 14px; }
-
-.phase {
+.phases {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
   background: var(--bg-card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 26px 28px;
-  display: grid;
-  grid-template-columns: 210px 1fr;
-  gap: 34px;
-  align-items: start;
+  overflow: hidden;
 }
-.phase__letter {
-  font-family: var(--font-serif);
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
+
+.phase {
+  padding: 24px 22px 26px;
+  border-right: 1px solid var(--line);
+  transition: background .16s ease;
 }
-.phase__letter small {
-  font-family: var(--font-sans);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.07em;
-  color: var(--accent);
+.phase:last-child { border-right: 0; }
+.phase:hover { background: #fcfbf9; }
+
+.phase__head {
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.phase__n {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 7px;
 }
-.phase__q { margin-top: 6px; font-size: 14.5px; color: var(--ink-muted); line-height: 1.5; }
-.tools { display: flex; flex-wrap: wrap; gap: 7px; }
+.phase__name {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.tools { display: grid; gap: 9px; }
 .tool {
   font-size: 13.5px;
+  line-height: 1.4;
   color: var(--ink-soft);
-  background: var(--bg-soft);
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  padding: 5px 11px;
-  white-space: nowrap;
+  padding-left: 14px;
+  position: relative;
+}
+.tool::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: .5;
 }
 
 /* --- Video de la clase -----------------------------------------------------
@@ -895,6 +960,18 @@ form {
   .flow__step:nth-child(2)::after { display: none; }
   .flow__step:nth-child(1), .flow__step:nth-child(2) { border-bottom: 1px solid var(--line); }
   .apps, .cert, .apply, .pair { grid-template-columns: 1fr; gap: 36px; }
+
+  /* Acá el titular ya ocupa todo el ancho: no hay hueco que llenar. */
+  .deco--bell { display: none; }
+  .deco--ring  { width: 220px; height: 220px; right: 10px; top: 36px; }
+  .deco--sigma { width: 180px; height: 196px; right: 16px; }
+  .deco__glyph { font-size: 180px; }
+
+  /* Cinco columnas no entran: pasan a tres, y la última fila cierra el borde. */
+  .phases { grid-template-columns: repeat(3, 1fr); }
+  .phase { border-bottom: 1px solid var(--line); }
+  .phase:nth-child(3n) { border-right: 0; }
+  .phase:nth-last-child(-n+2) { border-bottom: 0; }
   .videos { grid-template-columns: 1fr; gap: 18px; }
   .video__play { width: 62px; height: 62px; margin: -31px 0 0 -31px; }
   .video__play svg { width: 26px; height: 26px; }
@@ -919,7 +996,16 @@ form {
   .flow__step:last-child { border-bottom: 0; }
   .flow__step::after { display: none; }
   .section-head h2, .apply__copy h2 { font-size: 28px; }
-  .card, form, .app, .phase, .rail, .pair__card { padding: 22px; }
+  .card, form, .app, .rail, .pair__card { padding: 22px; }
+  .phase { padding: 20px; }
+
+  .deco--chart, .deco--ring { display: none; }
+  .deco--sigma { width: 140px; height: 150px; right: 8px; top: 10px; }
+  .deco__glyph { font-size: 140px; }
+
+  .phases { grid-template-columns: 1fr; }
+  .phase { border-right: 0; border-bottom: 1px solid var(--line); }
+  .phase:last-child { border-bottom: 0; }
   .videos { gap: 14px; }
   .video__play { width: 54px; height: 54px; margin: -27px 0 0 -27px; }
   .video__play svg { width: 23px; height: 23px; }

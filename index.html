@@ -45,6 +45,18 @@
 
 <!-- ======================= HERO ======================= -->
 <section class="hero">
+  <svg class="deco deco--bell" viewBox="0 0 420 260" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
+    <path class="deco__fill" d="M10 220 C 80 220 100 205 130 160 C 158 118 172 40 210 40 C 248 40 262 118 290 160 C 320 205 340 220 410 220 Z"/>
+    <path class="deco__line" d="M10 220 C 80 220 100 205 130 160 C 158 118 172 40 210 40 C 248 40 262 118 290 160 C 320 205 340 220 410 220"/>
+    <g class="deco__grid">
+      <line x1="210" y1="48" x2="210" y2="220"/>
+      <line x1="156" y1="104" x2="156" y2="220"/>
+      <line x1="264" y1="104" x2="264" y2="220"/>
+      <line x1="112" y1="183" x2="112" y2="220"/>
+      <line x1="308" y1="183" x2="308" y2="220"/>
+    </g>
+    <line class="deco__axis" x1="10" y1="220" x2="410" y2="220"/>
+  </svg>
   <div class="wrap">
     <span class="pill"><span class="pill__dot"></span>Lean Six Sigma · Green Belt</span>
     <h1>Resolvé un problema real. <em>Con metodología.</em></h1>
@@ -90,6 +102,12 @@
 
 <!-- ======================= PARA QUÉ ES ======================= -->
 <section class="section" id="programa">
+  <svg class="deco deco--chart" viewBox="0 0 520 200" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+    <line class="deco__axis" x1="0" y1="100" x2="520" y2="100"/>
+    <line class="deco__limit" x1="0" y1="36" x2="520" y2="36"/>
+    <line class="deco__limit" x1="0" y1="164" x2="520" y2="164"/>
+    <polyline class="deco__line" points="8,96 48,120 88,74 128,112 168,88 208,138 248,70 288,104 328,58 368,118 408,92 448,126 512,86"/>
+  </svg>
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Para qué es</div>
@@ -342,6 +360,16 @@
 
 <!-- ======================= FASES ======================= -->
 <section class="section section--soft" id="fases">
+  <svg class="deco deco--ring" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+    <g class="deco__arcs">
+      <path d="M105.1 16.2 A84 84 0 0 1 178.2 69.2"/>
+      <path d="M181.3 79.0 A84 84 0 0 1 153.4 164.8"/>
+      <path d="M145.1 170.8 A84 84 0 0 1 54.9 170.8"/>
+      <path d="M46.6 164.8 A84 84 0 0 1 18.7 79.0"/>
+      <path d="M21.8 69.2 A84 84 0 0 1 94.9 16.2"/>
+    </g>
+    <circle class="deco__dot" cx="100" cy="100" r="7"/>
+  </svg>
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Las 5 fases</div>
@@ -355,59 +383,67 @@
 
     <div class="phases">
       <article class="phase">
-        <div>
-          <div class="phase__letter">Definir <small>Fase 1</small></div>
-          <p class="phase__q">¿Cuál es el problema, a quién afecta y cuánto vale resolverlo?</p>
+        <div class="phase__head">
+          <span class="phase__n">Fase 1</span>
+          <h3 class="phase__name">Definir</h3>
         </div>
         <ul class="tools">
-          <li class="tool">Project Charter</li><li class="tool">SIPOC</li>
-          <li class="tool">Análisis de stakeholders</li><li class="tool">Plan de comunicación</li>
-          <li class="tool">Diagrama de proceso</li><li class="tool">Árbol CTQ</li>
+          <li class="tool">Project Charter</li>
+          <li class="tool">SIPOC</li>
+          <li class="tool">Análisis de stakeholders</li>
+          <li class="tool">Plan de comunicación</li>
+          <li class="tool">Diagrama de proceso</li>
+          <li class="tool">Árbol CTQ</li>
         </ul>
       </article>
-
       <article class="phase">
-        <div>
-          <div class="phase__letter">Medir <small>Fase 2</small></div>
-          <p class="phase__q">¿Cuánto es hoy, con qué variación y con qué confianza en el dato?</p>
+        <div class="phase__head">
+          <span class="phase__n">Fase 2</span>
+          <h3 class="phase__name">Medir</h3>
         </div>
         <ul class="tools">
-          <li class="tool">Plan de recolección de datos</li><li class="tool">Mapa de proceso detallado</li>
-          <li class="tool">Gráfico de la Y</li><li class="tool">Quick wins</li>
-          <li class="tool">Ishikawa</li><li class="tool">CPK actual</li>
+          <li class="tool">Plan de recolección de datos</li>
+          <li class="tool">Mapa de proceso detallado</li>
+          <li class="tool">Gráfico de la Y</li>
+          <li class="tool">Quick wins</li>
+          <li class="tool">Ishikawa</li>
+          <li class="tool">CPK actual</li>
         </ul>
       </article>
-
       <article class="phase">
-        <div>
-          <div class="phase__letter">Analizar <small>Fase 3</small></div>
-          <p class="phase__q">¿Qué X explica realmente el comportamiento de la Y?</p>
+        <div class="phase__head">
+          <span class="phase__n">Fase 3</span>
+          <h3 class="phase__name">Analizar</h3>
         </div>
         <ul class="tools">
-          <li class="tool">5 Porqués</li><li class="tool">Matriz C&amp;E</li>
-          <li class="tool">FMEA</li><li class="tool">Variables X priorizadas</li>
+          <li class="tool">5 Porqués</li>
+          <li class="tool">Matriz C&amp;E</li>
+          <li class="tool">FMEA</li>
+          <li class="tool">Variables X priorizadas</li>
         </ul>
       </article>
-
       <article class="phase">
-        <div>
-          <div class="phase__letter">Mejorar <small>Fase 4</small></div>
-          <p class="phase__q">¿Qué solución elegimos y cuánto movió el indicador?</p>
+        <div class="phase__head">
+          <span class="phase__n">Fase 4</span>
+          <h3 class="phase__name">Mejorar</h3>
         </div>
         <ul class="tools">
-          <li class="tool">Matriz Pugh</li><li class="tool">Matriz de priorización</li>
-          <li class="tool">CPK post mejora</li><li class="tool">Proceso futuro</li>
+          <li class="tool">Matriz Pugh</li>
+          <li class="tool">Matriz de priorización</li>
+          <li class="tool">CPK post mejora</li>
+          <li class="tool">Proceso futuro</li>
         </ul>
       </article>
-
       <article class="phase">
-        <div>
-          <div class="phase__letter">Controlar <small>Fase 5</small></div>
-          <p class="phase__q">¿Cómo evitamos que el proceso vuelva a como estaba?</p>
+        <div class="phase__head">
+          <span class="phase__n">Fase 5</span>
+          <h3 class="phase__name">Controlar</h3>
         </div>
         <ul class="tools">
-          <li class="tool">Plan de Controlar</li><li class="tool">Plan de auditorías</li>
-          <li class="tool">RACI</li><li class="tool">Validación de impacto financiero</li>
+          <li class="tool">Plan de control</li>
+          <li class="tool">Plan de auditorías</li>
+          <li class="tool">RACI</li>
+          <li class="tool">Validación de impacto financiero</li>
         </ul>
       </article>
     </div>
@@ -472,7 +508,10 @@
 </section>
 
 <!-- ======================= CERTIFICACIÓN ======================= -->
-<section class="section section--soft">
+<section class="section section--soft" id="certificacion">
+  <svg class="deco deco--sigma" viewBox="0 0 200 220" aria-hidden="true" focusable="false">
+    <text class="deco__glyph" x="100" y="178" text-anchor="middle">&#963;</text>
+  </svg>
   <div class="wrap">
     <div class="cert">
       <div>

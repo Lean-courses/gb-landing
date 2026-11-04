@@ -88,7 +88,7 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 > Para qué es
 
 **4.2** _(título)_
-> Lo que separa a un problema resuelto de uno que se repite no es la voluntad del equipo, sino la disciplina del método.
+> Decidir con método, no con intuición.
 
 **4.3** _(párrafo)_
 > Todos los días se toman decisiones sobre procesos con datos incompletos, causas supuestas y soluciones que vuelven al punto de partida a los tres meses. Green Belt te da la disciplina para evitarlo: separar el síntoma de la causa, medir antes de opinar, y sostener la mejora en el tiempo.
@@ -126,7 +126,7 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 > A quién está dirigido
 
 **5.2** _(título)_
-> A quien tiene un proceso bajo su responsabilidad y datos para mirarlo.
+> A quien lidera un proceso y posee datos para medirlo.
 
 **5.3** _(párrafo)_
 > No hace falta ser estadístico ni venir de mejora continua. Hace falta conocer el proceso, tener acceso a sus datos y poder mover algo cuando el análisis lo indique.
@@ -191,10 +191,10 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 > Cómo funciona
 
 **6.2** _(título)_
-> El proyecto se elige antes de empezar. La formación son dos semanas.
+> Una formación teórico-práctica de dos semanas.
 
 **6.3** _(párrafo)_
-> Nadie arranca a buscar un tema el primer día. Los proyectos se pre-seleccionan y se evalúa su factibilidad junto con los instructores y sponsors, de modo que las dos semanas de formación se dedican íntegramente a avanzar sobre casos que ya tienen sentido.
+> Los proyectos se pre-seleccionan y se evalúa su factibilidad junto con los instructores y sponsors, de modo que las dos semanas de formación se dedican íntegramente a avanzar sobre casos que ya tienen sentido.
 
 **6.4** _(rótulo)_
 > ANTES DE EMPEZAR
@@ -262,10 +262,10 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 > Las clases
 
 **7.2** _(título)_
-> Mirá cómo se dicta, antes de anotarte.
+> Ejemplos de clases.
 
 **7.3** _(párrafo)_
-> Clases completas del programa, sin editar. Así se enseña el método: con el caso sobre la mesa y las herramientas aplicándose en vivo.
+> Así se enseña el método: con el caso sobre la mesa y las herramientas aplicándose en vivo.
 
 ## 8. Las 5 fases
 
@@ -273,16 +273,16 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 > Las 5 fases
 
 **8.2** _(título)_
-> 24 herramientas, cada una en el momento en que sirve.
+> Las herramientas de cada etapa:
 
 **8.3** _(párrafo)_
 > No se enseñan como catálogo: se usan cuando la fase las pide. Todas están implementadas en la app del programa, con los cálculos automáticos resueltos (RPN, Cp/Cpk, nivel sigma, payback).
 
-**8.4** _(dato)_
-> Definir Fase 1
+**8.4** _(párrafo)_
+> Fase 1
 
-**8.5** _(párrafo)_
-> ¿Cuál es el problema, a quién afecta y cuánto vale resolverlo?
+**8.5** _(título)_
+> Definir
 
 **8.6** _(herramienta)_
 > Project Charter
@@ -302,11 +302,11 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 **8.11** _(herramienta)_
 > Árbol CTQ
 
-**8.12** _(dato)_
-> Medir Fase 2
+**8.12** _(párrafo)_
+> Fase 2
 
-**8.13** _(párrafo)_
-> ¿Cuánto es hoy, con qué variación y con qué confianza en el dato?
+**8.13** _(título)_
+> Medir
 
 **8.14** _(herramienta)_
 > Plan de recolección de datos
@@ -326,11 +326,11 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 **8.19** _(herramienta)_
 > CPK actual
 
-**8.20** _(dato)_
-> Analizar Fase 3
+**8.20** _(párrafo)_
+> Fase 3
 
-**8.21** _(párrafo)_
-> ¿Qué X explica realmente el comportamiento de la Y?
+**8.21** _(título)_
+> Analizar
 
 **8.22** _(herramienta)_
 > 5 Porqués
@@ -344,11 +344,11 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 **8.25** _(herramienta)_
 > Variables X priorizadas
 
-**8.26** _(dato)_
-> Mejorar Fase 4
+**8.26** _(párrafo)_
+> Fase 4
 
-**8.27** _(párrafo)_
-> ¿Qué solución elegimos y cuánto movió el indicador?
+**8.27** _(título)_
+> Mejorar
 
 **8.28** _(herramienta)_
 > Matriz Pugh
@@ -362,14 +362,14 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 **8.31** _(herramienta)_
 > Proceso futuro
 
-**8.32** _(dato)_
-> Controlar Fase 5
+**8.32** _(párrafo)_
+> Fase 5
 
-**8.33** _(párrafo)_
-> ¿Cómo evitamos que el proceso vuelva a como estaba?
+**8.33** _(título)_
+> Controlar
 
 **8.34** _(herramienta)_
-> Plan de Controlar
+> Plan de control
 
 **8.35** _(herramienta)_
 > Plan de auditorías
@@ -442,7 +442,7 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 > La certificación
 
 **10.2** _(título)_
-> El criterio de aprobación es el proyecto entregado, no la asistencia a las sesiones.
+> El criterio de aprobación.
 
 **10.3** _(párrafo)_
 > La certificación se emite cuando el proyecto está cerrado y el impacto validado
