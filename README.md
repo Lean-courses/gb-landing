@@ -8,8 +8,8 @@ postulaciones. Es la puerta de entrada a las dos apps del programa:
 ## Cómo se ve
 
 Estilo minimalista cálido (referencia: Claude / Notion): fondo crema, mucho
-espacio en blanco, títulos en serif (Georgia), un único acento verde oscuro
-(`#1a5b43`) y bordes de 1px. El cuerpo va en sans. Sin webfonts: la página
+espacio en blanco, títulos en serif (Georgia), un único acento bordó
+(`#7a1f2b`) y bordes de 1px. El cuerpo va en sans. Sin webfonts: la página
 renderiza sin pedir nada a la red.
 
 La página **no es de ninguna empresa en particular**: es la oferta del programa.
