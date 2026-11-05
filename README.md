@@ -94,6 +94,7 @@ enviaría; habría que volver al mail prellenado.
 | Qué querés cambiar | Dónde |
 |---|---|
 | Textos, secciones, preguntas del FAQ | `index.html` |
+| Los links del menú | `<nav id="nav-links">` en `index.html`, justo debajo del `<header>` |
 | Colores, tipografías, espaciados | bloque `:root` al tope de `styles.css` |
 | Mail que recibe las postulaciones | variable `DESTINO_MAIL` en Vercel (o la constante `DESTINO_POR_DEFECTO` en `api/postular.js`) |
 | Texto del mail que te llega | función `handler` en `api/postular.js` |
@@ -113,6 +114,24 @@ window.open('https://forms.office.com/...', '_blank', 'noopener');
 ```
 
 y borrar `api/postular.js`.
+
+## La navegación
+
+Hay un solo `<nav id="nav-links">` y cambia de forma según el ancho:
+
+- **1280px o más**: riel vertical fijo a la izquierda. El contenido se corre
+  224px (`--rail-w`) para dejarle lugar.
+- **Menos de 1280px**: panel desplegable que abre el botón de hamburguesa.
+- **Sin JavaScript**: lista visible debajo de la barra. La navegación nunca
+  desaparece.
+
+Vive **fuera** del `<header class="nav">` a propósito: ese header tiene
+`backdrop-filter`, y un ancestro con `backdrop-filter` crea bloque contenedor
+para `position: fixed`, lo que dejaría el riel anclado a la barra de 62px en
+lugar de al viewport.
+
+Un link puede representar más de una sección con `data-sections`: "El método"
+lleva `data-sections="fases cambio"` y se resalta en las dos.
 
 ## Los videos de las clases
 

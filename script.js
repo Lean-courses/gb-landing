@@ -76,7 +76,7 @@ const DESTINO_POSTULACIONES = 'drotondi@gmail.com';
   });
 
   // Al rotar el teléfono o pasar a desktop, el panel no debe quedar colgado.
-  const ancha = window.matchMedia('(min-width: 981px)');
+  const ancha = window.matchMedia('(min-width: 1280px)');
   const alCambiar = (e) => { if (e.matches) abrir(false); };
   if (ancha.addEventListener) ancha.addEventListener('change', alCambiar);
   else ancha.addListener(alCambiar);          // Safari viejo

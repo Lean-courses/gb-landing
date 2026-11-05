@@ -29,17 +29,21 @@
             aria-controls="nav-links" aria-expanded="false" aria-label="Abrir el menú">
       <span class="nav__burger" aria-hidden="true"></span>
     </button>
-    <nav class="nav__links" id="nav-links" aria-label="Secciones">
-      <a href="#programa">El programa</a>
-      <a href="#perfil">A quién va dirigido</a>
-      <a href="#como">Cómo funciona</a>
-      <a href="#fases" data-sections="fases cambio">El método</a>
-      <a href="#apps">Las apps</a>
-      <a href="#faq">Preguntas</a>
-    </nav>
     <a class="btn btn--primary btn--sm" href="#postular">Postularme</a>
   </div>
 </header>
+
+<!-- Secciones. A partir de 1280px es el riel lateral fijo; por debajo, el
+     panel que abre la hamburguesa. Vive fuera del <header> a propósito. -->
+<nav class="nav__links" id="nav-links" aria-label="Secciones">
+  <a href="#programa">El programa</a>
+  <a href="#perfil">A quién va dirigido</a>
+  <a href="#como">Cómo funciona</a>
+  <a href="#fases" data-sections="fases cambio">El método</a>
+  <a href="#apps">Las apps</a>
+  <a href="#faq">Preguntas</a>
+</nav>
+
 
 <main id="top">
 
