@@ -480,10 +480,10 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 > Las herramientas digitales
 
 **11.2** _(título)_
-> Dos aplicaciones. Una para practicar, otra para ejecutar.
+> Tres aplicaciones: para ver, para practicar y para ejecutar.
 
 **11.3** _(párrafo)_
-> El programa NO se lleva en un Excel que cada uno guarda en su carpeta. Hay una única fuente para tu proyecto, y un simulador para equivocarte antes, donde no cuesta nada.
+> El programa NO se lleva en un Excel que cada uno guarda en su carpeta. Hay una única fuente para tu proyecto, un simulador para equivocarte antes —donde no cuesta nada— y un set de simulaciones que muestran los conceptos en lugar de explicarlos.
 
 **11.4** _(título)_
 > My GreenBelt Project
@@ -529,6 +529,30 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 
 **11.18** _(botón)_
 > Abrir Sigma Sim
+
+**11.19** _(título)_
+> Lean Simulations
+
+**11.20** _(párrafo)_
+> Simulaciones interactivas que hacen visibles los conceptos: en vez de explicarte la variación, la ves aparecer.
+
+**11.21** _(ítem)_
+> Tablero de Galton — de dónde sale la curva normal
+
+**11.22** _(ítem)_
+> Ley de Little — por qué para bajar el lead time hay que bajar el WIP
+
+**11.23** _(ítem)_
+> Push vs. Pull — juego de planificación, MRP contra kanban
+
+**11.24** _(ítem)_
+> Capacidad de proceso — movés media, dispersión y límites, y mirás el Cp/Cpk
+
+**11.25** _(ítem)_
+> Corren en el navegador, sin instalar nada
+
+**11.26** _(botón)_
+> Abrir Lean Simulations
 
 ## 12. Certificación
 
@@ -695,6 +719,9 @@ No hace falta que respetes el formato: una lista suelta también sirve.
 > Sigma Sim
 
 **15.4** _(link del pie)_
+> Lean Simulations
+
+**15.5** _(link del pie)_
 > Contact us
 
 ## 16. Textos de ejemplo dentro de los campos del formulario
