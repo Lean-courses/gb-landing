@@ -1,7 +1,8 @@
 /* =============================================================================
    Green Belt LatAm — comportamiento de la landing
-   Sin dependencias. Dos cosas: resaltar la sección activa en el nav y armar
-   el mail de postulación.
+   Sin dependencias. Videos con fachada, menú de pantallas chicas, sección
+   activa en el nav, barra con sombra al scrollear, aparición suave de los
+   bloques y envío del formulario.
    ========================================================================== */
 
 /* --- Destino de las postulaciones -------------------------------------------
@@ -76,7 +77,8 @@ const DESTINO_POSTULACIONES = 'drotondi@gmail.com';
   });
 
   // Al rotar el teléfono o pasar a desktop, el panel no debe quedar colgado.
-  const ancha = window.matchMedia('(min-width: 1280px)');
+  // Mismo corte que en styles.css: desde 1200px las secciones van en la barra.
+  const ancha = window.matchMedia('(min-width: 1200px)');
   const alCambiar = (e) => { if (e.matches) abrir(false); };
   if (ancha.addEventListener) ancha.addEventListener('change', alCambiar);
   else ancha.addListener(alCambiar);          // Safari viejo
@@ -132,7 +134,60 @@ const DESTINO_POSTULACIONES = 'drotondi@gmail.com';
   byId.forEach((_, section) => observer.observe(section));
 })();
 
-/* --- 4. Formulario de postulación ------------------------------------------
+/* --- 4. Barra: sombra al dejar el tope -------------------------------------- */
+
+(function navShadow() {
+  const barra = document.querySelector('.nav');
+  if (!barra) return;
+  let pendiente = false;
+  const actualizar = () => {
+    barra.classList.toggle('is-scrolled', window.scrollY > 8);
+    pendiente = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!pendiente) { pendiente = true; requestAnimationFrame(actualizar); }
+  }, { passive: true });
+  actualizar();
+})();
+
+/* --- 5. Aparición suave de los bloques ---------------------------------------
+   No toca el scroll: el navegador scrollea como siempre y cada bloque entra
+   con un fundido corto la primera vez que llega a la pantalla. Si el usuario
+   pidió menos movimiento, o el navegador no tiene IntersectionObserver, no se
+   oculta nada. El hero no participa: tiene que verse al instante.           */
+
+(function reveal() {
+  const quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (quieto || !('IntersectionObserver' in window)) return;
+
+  const SELECTOR = [
+    '.section-head', '.facts', '.clients__row',
+    '.card', '.role', '.req', '.flow__step', '.rail', '.pair__card',
+    '.phase', '.cambio__nota', '.video', '.app', '.check', '.faq', '.apply',
+  ].join(',');
+
+  const bloques = Array.from(document.querySelectorAll(SELECTOR))
+    .filter((el) => !el.closest('.hero .hero__grid'));
+
+  const io = new IntersectionObserver((entradas) => {
+    entradas.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('is-in');
+      io.unobserve(e.target);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+
+  bloques.forEach((el) => {
+    // Hermanos de una misma grilla entran escalonados, como máximo 4 pasos.
+    const hermanos = el.parentElement ? Array.from(el.parentElement.children) : [el];
+    const i = Math.min(hermanos.indexOf(el), 4);
+    if (i > 0) el.style.transitionDelay = (i * 70) + 'ms';
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+})();
+
+/* --- 6. Formulario de postulación ------------------------------------------
    Envía por fetch a /api/postular, que manda el mail del lado del servidor.
    El candidato nunca sale de la página ni abre su cliente de correo.
    Si el envío falla, se le ofrece el mail prellenado como respaldo.         */
