@@ -15,7 +15,7 @@ Tomados de `drotondi/MyGreenBeltProject` (`README.md` y
 |---|---|
 | Las 5 fases DMAIC son secuenciales y cada una cierra con un tollgate | Spec, §2 Glosario |
 | Son 24 herramientas, repartidas 6 / 6 / 4 / 4 / 4 por fase | README, §3 |
-| El listado exacto de herramientas por fase que aparece en la página | README, §3 |
+| El listado exacto de herramientas por fase (la sección que lo mostraba se quitó de la página; la cifra de 24 sigue en el hero) | README, §3 |
 | El tollgate lo aprueba o rechaza el coach (MBB); el candidato presenta | Spec, §3.2 |
 | El candidato no puede aprobar su propio tollgate ni elegir su coach | Spec, §3.2 |
 | No se avanza de fase sin aprobar el tollgate; las obligatorias deben estar completas | README, §3 |
