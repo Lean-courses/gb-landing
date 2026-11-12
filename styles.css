@@ -4,18 +4,25 @@
    ========================================================================== */
 
 :root {
-  /* Color */
-  --bg:          #faf9f7;
-  --bg-soft:     #f2f0ea;
-  --bg-card:     #ffffff;
-  --ink:         #1f1e1d;
-  --ink-soft:    #3d3a37;
-  --ink-muted:   #6b6760;
-  --line:        #e6e2da;
-  --line-strong: #d8d3c8;
-  --accent:      #7a1f2b;
-  --accent-ink:  #5e141e;
-  --accent-soft: #f4e9ea;
+  /* Color — verde, gris frío y blanco.
+     El verde vivo es relleno, nunca texto: blanco sobre él da 2.1:1, así que
+     el botón principal lleva texto ink (6.9:1). El verde profundo sí es
+     seguro como texto y sobre él va blanco (5.0:1).
+     Medidos sobre blanco: ink 14.5:1 · ink-soft 11.7:1 · ink-muted 7.5:1. */
+  --bg:           #fafafa;
+  --bg-soft:      #f0f4f8;
+  --bg-card:      #ffffff;
+  --ink:          #032c46;
+  --ink-soft:     #0f3c55;
+  --ink-muted:    #3e5868;
+  --line:         #e6ecf0;
+  --line-strong:  #d7dfe5;
+  --accent:       #078049;   /* verde seguro como texto y con blanco encima */
+  --accent-ink:   #065f3c;
+  --accent-vivid: #10cd73;   /* relleno del CTA, como el referente */
+  --accent-hover: #0ea55e;
+  --on-vivid:     #032c46;   /* ink sobre el verde vivo */
+  --accent-soft:  #eafaf2;
 
   /* Tipografía */
   --font-serif: ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
@@ -111,9 +118,9 @@ img, svg { max-width: 100%; }
 
 .todo {
   display: inline-block;
-  background: #fff6d6;
-  border: 1px dashed #d9c173;
-  color: #7a5c0e;
+  background: #fff8e6;
+  border: 1px dashed #e0cb88;
+  color: #6b5400;
   font-size: 12.5px;
   font-weight: 600;
   padding: 1px 7px;
@@ -189,15 +196,15 @@ img, svg { max-width: 100%; }
               transform .16s ease;
 }
 
-.btn--primary { background: var(--accent); color: #fff; }
-.btn--primary:hover { background: var(--accent-ink); }
+.btn--primary { background: var(--accent-vivid); color: var(--on-vivid); }
+.btn--primary:hover { background: var(--accent-hover); }
 
 .btn--ghost {
   background: transparent;
   color: var(--ink);
   border-color: var(--line-strong);
 }
-.btn--ghost:hover { background: #fff; border-color: #c3bcae; }
+.btn--ghost:hover { background: #fff; border-color: var(--line-strong); }
 
 .btn--sm { padding: 9px 16px; font-size: 14.5px; border-radius: 8px; }
 .btn--block { width: 100%; }
@@ -534,7 +541,7 @@ img, svg { max-width: 100%; }
 .client--empty {
   border: 1.4px dashed var(--line-strong);
   border-radius: var(--radius-sm);
-  color: #a39c90;
+  color: var(--ink-muted);
   font-size: 13.5px;
   letter-spacing: 0.01em;
 }
@@ -635,7 +642,7 @@ img, svg { max-width: 100%; }
   transition: background .16s ease;
 }
 .phase:last-child { border-right: 0; }
-.phase:hover { background: #fcfbf9; }
+.phase:hover { background: #f7fafb; }
 
 .phase__head {
   padding-bottom: 14px;
@@ -894,10 +901,10 @@ form {
   align-items: flex-start;
   gap: 9px;
   text-align: left;
-  color: #8a2c10;
-  background: #fdf2ec;
-  border: 1px solid #f0d2c2;
-  border-left: 3px solid #c2410c;
+  color: #8a0040;
+  background: #fdf0f5;
+  border: 1px solid #f2ccdc;
+  border-left: 3px solid #a8004f;
   border-radius: 8px;
   padding: 11px 13px;
   font-size: 13.5px;
@@ -909,7 +916,7 @@ form {
   height: 17px;
   margin-top: 1px;
   border-radius: 50%;
-  background: #c2410c;
+  background: #a8004f;
   color: #fff;
   font-size: 12px;
   font-weight: 700;
