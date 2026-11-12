@@ -162,8 +162,8 @@ const DESTINO_POSTULACIONES = 'drotondi@gmail.com';
 
   const SELECTOR = [
     '.section-head', '.facts', '.clients__row',
-    '.card', '.role', '.req', '.flow__step', '.rail', '.pair__card',
-    '.phase', '.cambio__nota', '.video', '.app', '.check', '.faq', '.apply',
+    '.card', '.role', '.reqs', '.flow__step', '.rail', '.pair__card',
+    '.video', '.app', '.check', '.faq', '.apply',
   ].join(',');
 
   const bloques = Array.from(document.querySelectorAll(SELECTOR))

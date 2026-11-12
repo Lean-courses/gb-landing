@@ -8,9 +8,9 @@ postulaciones. Es la puerta de entrada a las dos apps del programa:
 ## Cómo se ve
 
 Landing moderna y minimalista, en verde, gris frío y blanco: títulos en sans
-grueso, mucho aire, tarjetas redondeadas con sombras suaves, botones en
-píldora y una sola banda oscura (gestión del cambio) para dar contraste a
-mitad de página. Sin webfonts: la tipografía es la del sistema y la página
+grueso, mucho aire, poco texto por bloque, botones en píldora y una sola banda
+oscura (gestión del cambio) para dar contraste a mitad de página. "A quién
+está dirigido" va como texto puro, sin tarjetas. Sin webfonts: la tipografía es la del sistema y la página
 renderiza sin pedir nada a la red.
 
 La paleta comparte valores con el hub de simulaciones, así que pasar de una
@@ -131,7 +131,6 @@ enviaría; habría que volver al mail prellenado.
 | Links a las apps | buscar `vercel.app` en `index.html` |
 | Logos de clientes | sección `.clients` de `index.html` + archivos en `assets/` |
 | Los videos de las clases | sección `#clase` de `index.html` |
-| Las 24 herramientas por fase | sección `#fases` de `index.html` |
 
 ### Pasar la postulación a un Microsoft Form
 
@@ -148,9 +147,7 @@ y borrar `api/postular.js`.
 
 Hay un solo `<nav id="nav-links">` y cambia de forma según el ancho:
 
-- **1200px o más**: fila de links centrada sobre la barra superior. Entre
-  1200 y 1320px se oculta el subtítulo "Lean Six Sigma" de la marca, que si no
-  pisaría el primer link.
+- **1200px o más**: fila de links centrada sobre la barra superior.
 - **Menos de 1200px**: tarjeta desplegable que abre el botón de hamburguesa.
 - **Sin JavaScript**: lista visible debajo de la barra. La navegación nunca
   desaparece.
@@ -164,8 +161,9 @@ Vive **fuera** del `<header class="nav">` a propósito: ese header tiene
 para `position: fixed`, lo que dejaría la fila anclada a la barra en lugar de
 al viewport.
 
-Un link puede representar más de una sección con `data-sections`: "El método"
-lleva `data-sections="fases cambio"` y se resalta en las dos.
+Un link puede representar más de una sección con `data-sections`: "Cómo
+funciona" lleva `data-sections="como cambio"` y se resalta también mientras se
+lee gestión del cambio, que no tiene link propio.
 
 ## Los videos de las clases
 
