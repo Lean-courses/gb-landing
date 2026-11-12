@@ -13,7 +13,7 @@
 <meta property="og:description" content="Aprendé DMAIC y gestión del cambio resolviendo un problema real de tu proceso. Dos semanas de formación, coach asignado y certificación.">
 <meta property="og:locale" content="es_LA">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237a1f2b'/><text y='72' x='50' text-anchor='middle' font-size='58' font-family='Georgia,serif' fill='%23faf9f7'>σ</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='26' fill='%2310cd73'/><text y='71' x='50' text-anchor='middle' font-size='60' font-weight='700' font-family='Helvetica,Arial,sans-serif' fill='%23032c46'>σ</text></svg>">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,6 +22,7 @@
 <header class="nav">
   <div class="wrap nav__inner">
     <a class="brand" href="#top">
+      <span class="brand__logo" aria-hidden="true">σ</span>
       <span class="brand__mark">Green Belt</span>
       <span class="brand__sub">Lean Six Sigma</span>
     </a>
@@ -49,42 +50,67 @@
 
 <!-- ======================= HERO ======================= -->
 <section class="hero">
-  <svg class="deco deco--bell" viewBox="0 0 420 260" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
-    <path class="deco__fill" d="M10 220 C 80 220 100 205 130 160 C 158 118 172 40 210 40 C 248 40 262 118 290 160 C 320 205 340 220 410 220 Z"/>
-    <path class="deco__line" d="M10 220 C 80 220 100 205 130 160 C 158 118 172 40 210 40 C 248 40 262 118 290 160 C 320 205 340 220 410 220"/>
-    <g class="deco__grid">
-      <line x1="210" y1="48" x2="210" y2="220"/>
-      <line x1="156" y1="104" x2="156" y2="220"/>
-      <line x1="264" y1="104" x2="264" y2="220"/>
-      <line x1="112" y1="183" x2="112" y2="220"/>
-      <line x1="308" y1="183" x2="308" y2="220"/>
-    </g>
-    <line class="deco__axis" x1="10" y1="220" x2="410" y2="220"/>
-  </svg>
-  <div class="wrap">
-    <span class="pill"><span class="pill__dot"></span>Lean Six Sigma · Green Belt</span>
-    <h1>Resolvé un problema real. <em>Con metodología.</em></h1>
-    <p class="hero__lead">
-      El programa Lean Six Sigma Green Belt no es un curso teórico: es un
-      proyecto de mejora en tu propio proceso, guiado paso a paso con metodología DMAIC,
-      revisado por un coach y medido en impacto financiero.
-    </p>
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="#postular">Postularme al programa</a>
-      <a class="btn btn--ghost" href="#como">Ver cómo funciona</a>
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <span class="pill"><span class="pill__dot"></span>Lean Six Sigma · Green Belt</span>
+      <h1>Resolvé un problema real. <em>Con metodología.</em></h1>
+      <p class="hero__lead">
+        El programa Lean Six Sigma Green Belt no es un curso teórico: es un
+        proyecto de mejora en tu propio proceso, guiado paso a paso con metodología DMAIC,
+        revisado por un coach y medido en impacto financiero.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#postular">Postularme al programa</a>
+        <a class="btn btn--ghost" href="#como">Ver cómo funciona</a>
+      </div>
     </div>
 
+    <!-- Ilustración: un proyecto a mitad del recorrido. Decorativa, no es un dato. -->
+    <div class="hero__visual" aria-hidden="true">
+      <div class="viz">
+        <svg class="viz__bell" viewBox="0 0 420 220" focusable="false" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="viz-fill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#10cd73" stop-opacity=".32"/>
+              <stop offset="1" stop-color="#10cd73" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <line class="viz__spec" x1="96" y1="18" x2="96" y2="208"/>
+          <line class="viz__spec" x1="324" y1="18" x2="324" y2="208"/>
+          <path d="M10 208 C 80 208 100 194 130 150 C 158 108 172 30 210 30 C 248 30 262 108 290 150 C 320 194 340 208 410 208 Z" fill="url(#viz-fill)"/>
+          <path class="viz__curve" d="M10 208 C 80 208 100 194 130 150 C 158 108 172 30 210 30 C 248 30 262 108 290 150 C 320 194 340 208 410 208"/>
+          <line class="viz__axis" x1="10" y1="208" x2="410" y2="208"/>
+        </svg>
+
+        <div class="viz__card viz__card--phases">
+          <span class="viz__label">Recorrido DMAIC</span>
+          <ol class="viz__dmaic">
+            <li class="is-done">D</li><li class="is-done">M</li><li class="is-now">A</li><li>I</li><li>C</li>
+          </ol>
+        </div>
+
+        <div class="viz__card viz__card--gate">
+          <span class="viz__check">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M5.6 10.4l2.9 2.9 5.9-6.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span><b>Tollgate aprobado</b><small>Fase Medir · revisada por tu coach</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
     <div class="facts">
       <div class="fact">
-        <div class="fact__n">5 fases</div>
+        <div class="fact__n"><span class="fact__k">5</span> fases</div>
         <div class="fact__t">Definir, Medir, Analizar, Mejorar, Controlar. Secuenciales, con tollgate entre cada una.</div>
       </div>
       <div class="fact">
-        <div class="fact__n">24 herramientas</div>
+        <div class="fact__n"><span class="fact__k">24</span> herramientas</div>
         <div class="fact__t">Del charter al plan de control, todas disponibles en la app del programa.</div>
       </div>
       <div class="fact">
-        <div class="fact__n">2 semanas</div>
+        <div class="fact__n"><span class="fact__k">2</span> semanas</div>
         <div class="fact__t">De formación: método DMAIC, gestión del cambio y la presentación del proyecto de cada candidato.</div>
       </div>
     </div>
@@ -106,12 +132,6 @@
 
 <!-- ======================= PARA QUÉ ES ======================= -->
 <section class="section" id="programa">
-  <svg class="deco deco--chart" viewBox="0 0 520 200" aria-hidden="true" focusable="false" preserveAspectRatio="none">
-    <line class="deco__axis" x1="0" y1="100" x2="520" y2="100"/>
-    <line class="deco__limit" x1="0" y1="36" x2="520" y2="36"/>
-    <line class="deco__limit" x1="0" y1="164" x2="520" y2="164"/>
-    <polyline class="deco__line" points="8,96 48,120 88,74 128,112 168,88 208,138 248,70 288,104 328,58 368,118 408,92 448,126 512,86"/>
-  </svg>
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Para qué es</div>
@@ -260,19 +280,19 @@
         <line x1="60" y1="46" x2="980" y2="46" stroke="#d7dfe5" stroke-width="1.5"/>
 
         <g fill="#078049">
-          <circle cx="60" cy="46" r="9"/><circle cx="290" cy="46" r="9"/><circle cx="520" cy="46" r="9"/>
-          <circle cx="750" cy="46" r="9"/><circle cx="980" cy="46" r="9"/>
+          <circle cx="60" cy="46" r="13"/><circle cx="290" cy="46" r="13"/><circle cx="520" cy="46" r="13"/>
+          <circle cx="750" cy="46" r="13"/><circle cx="980" cy="46" r="13"/>
         </g>
-        <g fill="#fafafa" font-family="ui-sans-serif,Arial,sans-serif" font-size="10" font-weight="700" text-anchor="middle">
-          <text x="60" y="49.6">D</text><text x="290" y="49.6">M</text><text x="520" y="49.6">A</text>
-          <text x="750" y="49.6">I</text><text x="980" y="49.6">C</text>
+        <g fill="#ffffff" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+          <text x="60" y="50.6">D</text><text x="290" y="50.6">M</text><text x="520" y="50.6">A</text>
+          <text x="750" y="50.6">I</text><text x="980" y="50.6">C</text>
         </g>
 
-        <g font-family="ui-serif,Georgia,serif" font-size="17" font-weight="600" fill="#032c46" text-anchor="middle">
+        <g font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="16" font-weight="700" fill="#032c46" text-anchor="middle">
           <text x="60" y="82">Definir</text><text x="290" y="82">Medir</text><text x="520" y="82">Analizar</text>
           <text x="750" y="82">Mejorar</text><text x="980" y="82">Controlar</text>
         </g>
-        <g font-family="ui-sans-serif,Arial,sans-serif" font-size="12" fill="#3e5868" text-anchor="middle">
+        <g font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12" fill="#3e5868" text-anchor="middle">
           <text x="60" y="102">Qué problema</text><text x="60" y="118">y por qué importa</text>
           <text x="290" y="102">Cuánto es hoy</text><text x="290" y="118">la línea de base</text>
           <text x="520" y="102">Por qué pasa</text><text x="520" y="118">la causa raíz probada</text>
@@ -293,7 +313,7 @@
           <g transform="translate(865,46)">
             <path d="M0 -13 L12 0 L0 13 L-12 0 Z" fill="#eafaf2" stroke="#a9e3c6" stroke-width="1.2"/>
           </g>
-          <g font-family="ui-sans-serif,Arial,sans-serif" font-size="10.5" font-weight="600" fill="#065f3c" text-anchor="middle" letter-spacing="0.5">
+          <g font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="10.5" font-weight="600" fill="#065f3c" text-anchor="middle" letter-spacing="0.5">
             <text x="175" y="20">TOLLGATE</text><text x="405" y="20">TOLLGATE</text>
             <text x="635" y="20">TOLLGATE</text><text x="865" y="20">TOLLGATE</text>
           </g>
@@ -334,16 +354,6 @@
 
 <!-- ======================= FASES ======================= -->
 <section class="section section--soft" id="fases">
-  <svg class="deco deco--ring" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
-    <g class="deco__arcs">
-      <path d="M105.1 16.2 A84 84 0 0 1 178.2 69.2"/>
-      <path d="M181.3 79.0 A84 84 0 0 1 153.4 164.8"/>
-      <path d="M145.1 170.8 A84 84 0 0 1 54.9 170.8"/>
-      <path d="M46.6 164.8 A84 84 0 0 1 18.7 79.0"/>
-      <path d="M21.8 69.2 A84 84 0 0 1 94.9 16.2"/>
-    </g>
-    <circle class="deco__dot" cx="100" cy="100" r="7"/>
-  </svg>
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Las 5 fases</div>
@@ -425,7 +435,7 @@
 </section>
 
 <!-- ======================= GESTIÓN DEL CAMBIO ======================= -->
-<section class="section" id="cambio">
+<section class="section section--dark" id="cambio">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Gestión del cambio</div>
@@ -605,15 +615,12 @@
 
 <!-- ======================= CERTIFICACIÓN ======================= -->
 <section class="section section--soft" id="certificacion">
-  <svg class="deco deco--sigma" viewBox="0 0 200 220" aria-hidden="true" focusable="false">
-    <text class="deco__glyph" x="100" y="178" text-anchor="middle">&#963;</text>
-  </svg>
   <div class="wrap">
     <div class="cert">
       <div>
         <div class="eyebrow">La certificación</div>
-        <h2 style="font-size:36px">El criterio de aprobación.</h2>
-        <p class="lead" style="margin-top:18px">
+        <h2>El criterio de aprobación.</h2>
+        <p class="lead">
           La certificación se emite cuando el proyecto está cerrado y el impacto validado
           <span class="todo">COMPLETAR: quién emite la certificación</span>. El recorrido queda
           documentado en la app, tollgate por tollgate.
@@ -644,7 +651,7 @@
 <!-- ======================= FAQ ======================= -->
 <section class="section" id="faq">
   <div class="wrap wrap--narrow">
-    <div class="section-head" style="margin-bottom:40px">
+    <div class="section-head">
       <div class="eyebrow">Preguntas frecuentes</div>
       <h2>Lo que todos preguntan antes de anotarse.</h2>
     </div>

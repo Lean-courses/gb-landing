@@ -7,10 +7,39 @@ postulaciones. Es la puerta de entrada a las dos apps del programa:
 
 ## Cómo se ve
 
-Estilo minimalista cálido (referencia: Claude / Notion): fondo crema, mucho
-espacio en blanco, títulos en serif (Georgia), un único acento bordó
-(`#7a1f2b`) y bordes de 1px. El cuerpo va en sans. Sin webfonts: la página
+Landing moderna y minimalista, en verde, gris frío y blanco: títulos en sans
+grueso, mucho aire, tarjetas redondeadas con sombras suaves, botones en
+píldora y una sola banda oscura (gestión del cambio) para dar contraste a
+mitad de página. Sin webfonts: la tipografía es la del sistema y la página
 renderiza sin pedir nada a la red.
+
+La paleta comparte valores con el hub de simulaciones, así que pasar de una
+página a la otra no se siente como salir del sitio:
+
+| Rol | Color | Uso |
+|---|---|---|
+| Ink | `#032c46` | texto, banda oscura y footer |
+| Verde vivo | `#10cd73` | relleno de botones y acentos — **nunca texto sobre claro** |
+| Verde | `#078049` | texto verde, links, eyebrows |
+| Banda | `#f0f4f8` | secciones alternas |
+| Fondo | `#fafafa` | página |
+
+Una regla que no conviene romper: blanco sobre el verde vivo da **2.1:1**,
+ilegible. Por eso el botón principal lleva texto ink (6.9:1). Sobre la banda
+oscura, en cambio, el verde vivo sí funciona como texto (6.9:1).
+
+### Movimiento
+
+Solo dos cosas, las dos opcionales:
+
+- **Aparición suave**: cada bloque entra con un fundido corto la primera vez
+  que llega a la pantalla. No toca el scroll, que sigue siendo el nativo del
+  navegador. El hero no participa: se ve al instante.
+- **Scroll animado** al tocar un link del menú.
+
+Las dos se apagan solas si el usuario pidió *reducir movimiento* en su
+sistema, y sin JavaScript todo se ve desde el principio. No hay
+scroll-jacking, videos de fondo ni 3D.
 
 La página **no es de ninguna empresa en particular**: es la oferta del programa.
 Amcor aparece una sola vez, como cliente, en la banda "Empresas que ya
@@ -25,7 +54,7 @@ para el envío del formulario.
 ```
 index.html             la página completa
 styles.css             tokens de diseño + layout + responsive
-script.js              nav activo al scrollear + envío del formulario
+script.js              menú, nav activo, aparición de bloques + envío del formulario
 api/postular.js        función serverless: recibe la postulación y manda el mail
 assets/logo-amcor.png  logo de cliente (único binario del proyecto)
 vercel.json            headers y cleanUrls
@@ -119,16 +148,21 @@ y borrar `api/postular.js`.
 
 Hay un solo `<nav id="nav-links">` y cambia de forma según el ancho:
 
-- **1280px o más**: riel vertical fijo a la izquierda. El contenido se corre
-  224px (`--rail-w`) para dejarle lugar.
-- **Menos de 1280px**: panel desplegable que abre el botón de hamburguesa.
+- **1200px o más**: fila de links centrada sobre la barra superior. Entre
+  1200 y 1320px se oculta el subtítulo "Lean Six Sigma" de la marca, que si no
+  pisaría el primer link.
+- **Menos de 1200px**: tarjeta desplegable que abre el botón de hamburguesa.
 - **Sin JavaScript**: lista visible debajo de la barra. La navegación nunca
   desaparece.
 
+El corte de 1200px está en dos lugares que tienen que coincidir: los
+`@media` de `styles.css` y el `matchMedia` de `script.js` que cierra el panel
+al ensanchar la ventana.
+
 Vive **fuera** del `<header class="nav">` a propósito: ese header tiene
 `backdrop-filter`, y un ancestro con `backdrop-filter` crea bloque contenedor
-para `position: fixed`, lo que dejaría el riel anclado a la barra de 62px en
-lugar de al viewport.
+para `position: fixed`, lo que dejaría la fila anclada a la barra en lugar de
+al viewport.
 
 Un link puede representar más de una sección con `data-sections`: "El método"
 lleva `data-sections="fases cambio"` y se resalta en las dos.
