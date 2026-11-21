@@ -6,34 +6,37 @@
    ========================================================================== */
 
 :root {
-  /* Color — verde, gris frío y blanco.
-     El verde vivo es relleno, nunca texto sobre claro: blanco sobre él da
-     2.1:1, así que el botón principal lleva texto ink (6.9:1). Sobre la banda
-     oscura el mismo verde sí funciona como texto (6.9:1).
-     Medidos sobre blanco: ink 14.5:1 · ink-soft 11.7:1 · ink-muted 7.5:1 ·
-     accent 5.0:1. Sobre ink: blanco 14.5:1 · muted-on-dark 9.0:1. */
-  --bg:            #fafafa;
-  --bg-soft:       #f0f4f8;
-  --bg-card:       #ffffff;
-  --ink:           #032c46;
-  --ink-soft:      #0f3c55;
-  --ink-muted:     #3e5868;
-  --line:          #e6ecf0;
-  --line-strong:   #d7dfe5;
-  --accent:        #078049;   /* verde seguro como texto y con blanco encima */
-  --accent-ink:    #065f3c;
-  --accent-vivid:  #10cd73;   /* relleno del CTA, como el referente */
-  --accent-hover:  #0ea55e;
-  --on-vivid:      #032c46;   /* ink sobre el verde vivo */
-  --accent-soft:   #eafaf2;
-  --accent-line:   #a9e3c6;
+  /* Color — marfil 60%, negro piano 30%, turquesa 10%.
+     Marfil #eee3cc es el fondo de la página; el negro #151515 es el texto y la
+     banda oscura; el turquesa #00c2b5 queda para botones, marcas e íconos.
+     El turquesa NO sirve como texto sobre marfil: da 1.76:1. Por eso el botón
+     principal es turquesa con texto negro (8.2:1) y, donde el turquesa tiene
+     que ser una palabra, se usa --accent, un turquesa profundo (5.0:1).
+     Sobre la banda negra el turquesa puro sí funciona como texto (8.2:1).
+     Medidos sobre marfil: ink 14.3:1 · ink-muted 6.4:1 · accent 5.0:1.
+     Sobre negro: marfil 14.3:1 · muted-on-dark 8.9:1. */
+  --bg:            #eee3cc;   /* marfil: el 60% */
+  --bg-soft:       #f6f0e1;   /* marfil claro: secciones alternas */
+  --bg-card:       #fbf8f0;   /* marfil casi blanco: tarjetas y formulario */
+  --ink:           #151515;   /* negro piano: el 30% */
+  --ink-soft:      #2e2c27;
+  --ink-muted:     #54503f;
+  --line:          #dccfb2;
+  --line-strong:   #c9ba97;
+  --accent:        #006b63;   /* turquesa profundo: texto e íconos sobre marfil */
+  --accent-ink:    #00524b;
+  --accent-vivid:  #00c2b5;   /* turquesa: el 10%, solo relleno */
+  --accent-hover:  #00a89d;
+  --on-vivid:      #151515;   /* negro sobre el turquesa */
+  --accent-soft:   #d5eae0;
+  --accent-line:   #8dd3c9;
 
   /* Banda oscura */
-  --dark:          #032c46;
-  --dark-raise:    rgba(255, 255, 255, 0.05);
-  --dark-line:     rgba(255, 255, 255, 0.12);
-  --on-dark:       #ffffff;
-  --muted-on-dark: #c6d2da;
+  --dark:          #151515;
+  --dark-raise:    rgba(238, 227, 204, 0.06);
+  --dark-line:     rgba(238, 227, 204, 0.14);
+  --on-dark:       #eee3cc;
+  --muted-on-dark: #bdb4a0;
 
   /* Tipografía — una sola familia, de sistema */
   --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -46,10 +49,10 @@
   --radius-sm: 12px;
   --pill:      999px;
 
-  /* Elevación — sombras frías y suaves */
-  --shadow-sm: 0 1px 2px rgba(3, 44, 70, 0.04), 0 4px 14px rgba(3, 44, 70, 0.04);
-  --shadow-md: 0 2px 6px rgba(3, 44, 70, 0.05), 0 18px 40px rgba(3, 44, 70, 0.08);
-  --shadow-lg: 0 4px 10px rgba(3, 44, 70, 0.05), 0 30px 70px rgba(3, 44, 70, 0.12);
+  /* Elevación — sombras cálidas, con el negro de la paleta */
+  --shadow-sm: 0 1px 2px rgba(21, 21, 21, 0.05), 0 4px 14px rgba(21, 21, 21, 0.05);
+  --shadow-md: 0 2px 6px rgba(21, 21, 21, 0.06), 0 18px 40px rgba(21, 21, 21, 0.10);
+  --shadow-lg: 0 4px 10px rgba(21, 21, 21, 0.06), 0 30px 70px rgba(21, 21, 21, 0.14);
 
   /* Métrica */
   --wide:      1200px;
@@ -171,9 +174,9 @@ h4 { font-size: 18px; letter-spacing: -0.015em; }
 /* Etiqueta COMPLETAR: visible a propósito hasta que se resuelva el dato. */
 .todo {
   display: inline-block;
-  background: #fff8e6;
-  border: 1px dashed #e0cb88;
-  color: #6b5400;
+  background: #ffe9a3;
+  border: 1px dashed #b08a00;
+  color: #4f3b00;
   font-size: 12.5px;
   font-weight: 650;
   line-height: 1.4;
@@ -205,9 +208,9 @@ h4 { font-size: 18px; letter-spacing: -0.015em; }
 .btn--primary {
   background: var(--accent-vivid);
   color: var(--on-vivid);
-  box-shadow: 0 6px 18px rgba(16, 205, 115, 0.28);
+  box-shadow: 0 6px 18px rgba(0, 194, 181, 0.32);
 }
-.btn--primary:hover { background: var(--accent-hover); box-shadow: 0 8px 22px rgba(16, 205, 115, 0.32); }
+.btn--primary:hover { background: var(--accent-hover); box-shadow: 0 8px 22px rgba(0, 194, 181, 0.38); }
 
 .btn--ghost {
   background: var(--bg-card);
@@ -231,13 +234,13 @@ h4 { font-size: 18px; letter-spacing: -0.015em; }
   top: 0;
   z-index: 50;
   height: var(--nav-h);
-  background: rgba(250, 250, 250, 0.82);
+  background: rgba(238, 227, 204, 0.86);
   -webkit-backdrop-filter: saturate(160%) blur(14px);
   backdrop-filter: saturate(160%) blur(14px);
   border-bottom: 1px solid transparent;
   transition: border-color .2s ease, box-shadow .2s ease;
 }
-.nav.is-scrolled { border-bottom-color: var(--line); box-shadow: 0 6px 24px rgba(3, 44, 70, 0.05); }
+.nav.is-scrolled { border-bottom-color: var(--line); box-shadow: 0 6px 24px rgba(21, 21, 21, 0.07); }
 
 .nav__inner {
   height: 100%;
@@ -415,8 +418,8 @@ h4 { font-size: 18px; letter-spacing: -0.015em; }
   aspect-ratio: 1 / 0.82;
   border-radius: var(--radius-xl);
   background:
-    radial-gradient(110% 80% at 100% 0%, rgba(16, 205, 115, 0.14), rgba(16, 205, 115, 0) 60%),
-    linear-gradient(160deg, #ffffff 0%, var(--bg-soft) 100%);
+    radial-gradient(110% 80% at 100% 0%, rgba(0, 194, 181, 0.18), rgba(0, 194, 181, 0) 60%),
+    linear-gradient(160deg, var(--bg-card) 0%, var(--bg-soft) 100%);
   border: 1px solid var(--line);
   box-shadow: var(--shadow-lg);
   overflow: hidden;
@@ -429,7 +432,7 @@ h4 { font-size: 18px; letter-spacing: -0.015em; }
   width: 86%;
   height: auto;
 }
-.viz__curve { fill: none; stroke: var(--accent); stroke-width: 2.4; stroke-linecap: round; }
+.viz__curve { fill: none; stroke: var(--ink); stroke-width: 2.4; stroke-linecap: round; }
 .viz__axis  { stroke: var(--line-strong); stroke-width: 1.5; }
 
 .viz__card {
@@ -694,7 +697,7 @@ h4 { font-size: 18px; letter-spacing: -0.015em; }
   inset: auto -15% -40% auto;
   width: 760px;
   height: 760px;
-  background: radial-gradient(closest-side, rgba(16, 205, 115, 0.16), rgba(16, 205, 115, 0) 70%);
+  background: radial-gradient(closest-side, rgba(0, 194, 181, 0.20), rgba(0, 194, 181, 0) 70%);
   pointer-events: none;
 }
 .section--dark .wrap { position: relative; }
@@ -708,7 +711,7 @@ h4 { font-size: 18px; letter-spacing: -0.015em; }
   box-shadow: none;
 }
 .section--dark .pair__card p { color: var(--muted-on-dark); }
-.section--dark .pair__tag { background: rgba(16, 205, 115, 0.14); color: var(--accent-vivid); }
+.section--dark .pair__tag { background: rgba(0, 194, 181, 0.16); color: var(--accent-vivid); }
 .section--dark .tools { flex-direction: column; gap: 0; margin-top: 20px; }
 .section--dark .tool {
   background: transparent;
@@ -767,7 +770,7 @@ h4 { font-size: 18px; letter-spacing: -0.015em; }
 .video__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(3, 44, 70, 0) 40%, rgba(3, 44, 70, 0.45) 100%);
+  background: linear-gradient(180deg, rgba(21, 21, 21, 0) 40%, rgba(21, 21, 21, 0.5) 100%);
 }
 .video__play {
   position: absolute;
@@ -781,7 +784,7 @@ h4 { font-size: 18px; letter-spacing: -0.015em; }
   border-radius: 50%;
   background: var(--accent-vivid);
   color: var(--on-vivid);
-  box-shadow: 0 10px 30px rgba(3, 44, 70, 0.3);
+  box-shadow: 0 10px 30px rgba(21, 21, 21, 0.34);
   transition: transform .25s var(--ease), background .2s ease;
 }
 .video__play svg { width: 28px; height: 28px; margin-left: 3px; }
@@ -899,7 +902,7 @@ h4 { font-size: 18px; letter-spacing: -0.015em; }
   position: relative;
   padding: clamp(32px, 4.5vw, 56px);
   background:
-    radial-gradient(120% 80% at 0% 100%, rgba(16, 205, 115, 0.22), rgba(16, 205, 115, 0) 60%),
+    radial-gradient(120% 80% at 0% 100%, rgba(0, 194, 181, 0.26), rgba(0, 194, 181, 0) 60%),
     var(--dark);
   color: var(--muted-on-dark);
 }
@@ -933,12 +936,12 @@ form { padding: clamp(28px, 4.5vw, 56px); }
   background-position: right 16px center;
   cursor: pointer;
 }
-.field input::placeholder, .field textarea::placeholder { color: #5c7484; }  /* 4.7:1 sobre el campo */
+.field input::placeholder, .field textarea::placeholder { color: #6b6455; }  /* 4.6:1 sobre el campo */
 .field input:focus, .field select:focus, .field textarea:focus {
   outline: none;
   background: var(--bg-card);
   border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(16, 205, 115, 0.18);
+  box-shadow: 0 0 0 4px rgba(0, 194, 181, 0.26);
 }
 .field__hint { margin-top: 7px; font-size: 13.5px; color: var(--ink-muted); }
 
@@ -952,8 +955,8 @@ form { padding: clamp(28px, 4.5vw, 56px); }
   gap: 9px;
   text-align: left;
   color: #8a0040;
-  background: #fdf0f5;
-  border: 1px solid #f2ccdc;
+  background: #fcebef;
+  border: 1px solid #e8bccb;
   border-left: 3px solid #a8004f;
   border-radius: 10px;
   padding: 11px 13px;
