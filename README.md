@@ -135,9 +135,13 @@ enviaría; habría que volver al mail prellenado.
 | Mail que recibe las postulaciones | variable `DESTINO_MAIL` en Vercel (o la constante `DESTINO_POR_DEFECTO` en `api/postular.js`) |
 | Texto del mail que te llega | función `handler` en `api/postular.js` |
 | Texto de la confirmación en pantalla | función `mostrarExito` en `script.js` |
-| Links a las apps | buscar `vercel.app` en `index.html` |
+| Links a las apps | buscar `vercel.app` en `index.html` (ver abajo cuáles abren en la misma ventana) |
 | Logos de clientes | sección `.clients` de `index.html` + archivos en `assets/` |
 | Los videos de las clases | sección `#clase` de `index.html` |
+
+### Qué link abre en la misma ventana y cuál en una pestaña nueva
+
+**Lean Simulations** abre en la **misma ventana** (el botón de la sección de apps y el link del pie, sin `target`), y el hub tiene un link para volver a esta página. **MyGreenBeltProject** y **Sigma Sim** siguen abriendo en una **pestaña nueva** (`target="_blank"`): el cambio se pidió solo para Lean Simulations y a las otras dos no se las tocó. Para cambiar una, hay que cambiar el botón y el link del pie.
 
 ### Pasar la postulación a un Microsoft Form
 
