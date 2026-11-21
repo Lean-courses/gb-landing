@@ -7,26 +7,33 @@ postulaciones. Es la puerta de entrada a las dos apps del programa:
 
 ## Cómo se ve
 
-Landing moderna y minimalista, en verde, gris frío y blanco: títulos en sans
+Landing moderna y minimalista en marfil, negro y turquesa: títulos en sans
 grueso, mucho aire, poco texto por bloque, botones en píldora y una sola banda
 oscura (gestión del cambio) para dar contraste a mitad de página. "A quién
-está dirigido" va como texto puro, sin tarjetas. Sin webfonts: la tipografía es la del sistema y la página
-renderiza sin pedir nada a la red.
+está dirigido" va como texto puro, sin tarjetas.
 
-La paleta comparte valores con el hub de simulaciones, así que pasar de una
-página a la otra no se siente como salir del sitio:
+La paleta sigue la regla 60 / 30 / 10:
 
-| Rol | Color | Uso |
-|---|---|---|
-| Ink | `#032c46` | texto, banda oscura y footer |
-| Verde vivo | `#10cd73` | relleno de botones y acentos — **nunca texto sobre claro** |
-| Verde | `#078049` | texto verde, links, eyebrows |
-| Banda | `#f0f4f8` | secciones alternas |
-| Fondo | `#fafafa` | página |
+| Peso | Rol | Color | Uso |
+|---|---|---|---|
+| 60% | Marfil antiguo | `#eee3cc` | fondo de la página |
+| 30% | Negro piano | `#151515` | texto, banda oscura, formulario y pie |
+| 10% | Turquesa | `#00c2b5` | botones, marcas e íconos — **nunca texto sobre marfil** |
 
-Una regla que no conviene romper: blanco sobre el verde vivo da **2.1:1**,
-ilegible. Por eso el botón principal lleva texto ink (6.9:1). Sobre la banda
-oscura, en cambio, el verde vivo sí funciona como texto (6.9:1).
+Además hay tres derivados, para que todo sea legible: un marfil claro
+(`#f6f0e1`, secciones alternas), un marfil casi blanco (`#fbf8f0`, tarjetas) y
+un turquesa profundo (`#006b63`, el único turquesa que se usa como texto).
+
+Una regla que no conviene romper: el turquesa sobre marfil da **1.76:1**,
+ilegible. Por eso el botón principal es turquesa con texto negro (8.2:1), y por
+eso hay un turquesa profundo (5.0:1) para links, rótulos e íconos. Sobre la
+banda negra, en cambio, el turquesa puro sí funciona como texto (8.2:1).
+
+Medido sobre la página renderizada, por área de píxeles, el reparto es
+~79% marfil, ~18% negro y ~1% turquesa: la regla se cumple como peso visual (el
+marfil domina, el negro es secundario, el turquesa es el acento), no como
+superficie literal. Si se quisiera acercar el negro al 30% por área, el camino
+es sumar bandas oscuras, no oscurecer las existentes.
 
 ### Movimiento
 
